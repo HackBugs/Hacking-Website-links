@@ -59,7 +59,7 @@ Here’s a categorized list of the provided links related to the dark web and ot
 - **Sci-Hub** (Considered unethical by most countries. For informational purposes only): [Sci-Hub](https://sci-hub.se/)
 
 ### Hacking Labs and CTFs
-- [DVWA](https://dvwa.co.uk/)
+- [DVWA](https://tryhackme.com/r/room/dvwa)
 - [PicoCTF](https://picoctf.org/)
 - [VulnHub](https://www.vulnhub.com/)
 - [Hackaday](http://www.hackaday.com/)
