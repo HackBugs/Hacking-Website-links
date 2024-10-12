@@ -45,6 +45,8 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 - [Get Into PC](https://getintopc.com/)
 - [I Get Into PC - Software Categories](https://igetintopc.com/software-categories/)
 
+<hr>
+
 > Here’s the organized list of the resources and topics you provided, categorized for clarity:
 
 ### Hacking Resources
@@ -80,3 +82,37 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
   5. Crack Me Software for Testing:
      - [Cracking Lessons](https://crackinglessons.com/)
      - [CrackMe](https://crackmes.one/)
+
+<hr>
+
+> Here’s the organized list of the resources and topics you provided, categorized for better clarity:
+
+### Software and Tools
+- **Progress Telerik Fiddler**: Web Debugger Software
+- **Game Guardian**
+- **Burp Suite**
+- **Memory Hacking and Software Protection**: [Game Hacking Academy](https://gamehacking.academy/lesson/1/2)
+
+### Tutorials and Resources
+- **Cheat Engine Tutorial**: [YouTube Video](https://www.youtube.com/watch?v=HmIUJWZ1cZo&list=PLGaefQX49kgREVULItYXYQV1pL_-Xb8u-) (Hindi)
+- **GitHub Ethical Hacking Resources**: [Practical Ethical Hacking Resources](https://github.com/TCM-Course-Resources/Practical-Ethical-Hacking-Resources)
+
+### Online Tools and Resources
+- **Visual Studio Code Online**: [vscode.dev](https://vscode.dev/)
+- **Code Beautifier**: [Code Beautify](https://codebeautify.org/)
+- **Flipboard**: [Flipboard](https://flipboard.com/)
+- **SQL Tutorials**:
+  - [SQL Zoo](https://sqlzoo.net/wiki/SQL_Tutorial)
+  - [SQL Fiddle](http://sqlfiddle.com/#!9/cf23fc5)
+  - [Programiz SQL Compiler](https://www.programiz.com/sql/online-compiler/)
+- **Wideskills**: [Wideskills](https://www.wideskills.com/)
+- **QuillBot**: [Quillbot](https://quillbot.com/)
+- **OSINT Framework**: [OSINT Framework](https://osintframework.com/)
+- **Power Automate**: [Power Automate](https://make.powerautomate.com/environments/6a43d1a0-d8cc-e717-809c-fb4675b241da/home)
+- **All You Can Read**: [All You Can Read](https://www.allyoucanread.com/)
+- **CyberChef**: [CyberChef](https://gchq.github.io/CyberChef/#input=aGkK)
+- **W3Schools**: [W3Schools](https://www.w3schools.com/)
+- **Sysinternals Suite**: [Microsoft Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
+- **Malware Analysis Tools**: [Malware Analysis Tools](https://malwareanalysis.tools/)
+- **Android-x86 Project**: [Android-x86](https://www.android-x86.org/)
+- **ViewDNS**: [ViewDNS](https://viewdns.info/)
