@@ -10,6 +10,7 @@
 - [Malware Traffic Analysis](https://malware-traffic-analysis.net/)
 - [OSINT Tools](https://osint.tools/)
 - [Cybint Solutions](https://cybintsolutions.com/)
+- [DFI, Deep File Inspection (DFI)](https://labs.inquest.net/)
 
 Here’s the list of popular hacking and cybersecurity websites formatted as clickable links:
 
