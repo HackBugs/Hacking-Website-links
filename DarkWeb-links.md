@@ -71,7 +71,8 @@ Here’s a categorized list of the provided links related to the dark web and ot
 - [TorLinks](http://torlinkbgs6neox.onion/)
 
 ### Important Note
-Accessing the dark web carries significant risks. Always prioritize your safety and privacy.
+
+> Accessing the dark web carries significant risks. Always prioritize your safety and privacy.
 
 ### Hacking Labs and CTFs
 - [DVWA](https://tryhackme.com/r/room/dvwa)
@@ -86,3 +87,5 @@ Accessing the dark web carries significant risks. Always prioritize your safety 
 - [OverTheWire: Wargames](https://overthewire.org/wargames/)
 - [ProvingGrounds](https://www.offensive-security.com/labs/individual/)
 - [Pastebin of CTF Stuff](https://pastebin.com/u2QTfmZn)
+
+<hr>
