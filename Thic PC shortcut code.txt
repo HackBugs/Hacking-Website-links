@@ -1,0 +1,16 @@
+Computers Made Easy: From Dummy To Geek // book
+
+Computer\HKEY_CLASSES_ROOT\Directory\Background\shell
+
+%WinDir%\explorer.exe /e,::{20d04fe0-3aea-1069-a2d8-08002b30309d}
+Explorer.exe shell:::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+%windir%\explorer.exe "
+
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+
+God Mode
+GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}
+
+Windows Defender Firewal
+control firewall.cpl
+wf.msc
