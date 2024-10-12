@@ -1,3 +1,34 @@
+### Mobile Drivers Resources
+
+#### Driver Download Links
+- **Qualcomm, Mediatek, and SPD Drivers (Google Drive):**  
+  [Google Drive Folder](https://drive.google.com/drive/folders/15OOdRU5eohtfEHogEp7DA1LprbHAUfgk)
+- **Driver Installation Tutorial Video:**  
+  [YouTube Video](https://youtu.be/fTzhyd8Q9Lg?si=9KiD-e5xZatqaMk9)
+
+#### Driver Download Websites
+- **Samkey (Samsung Driver Download):**  
+  [Samkey Official Website](https://www.samkey.org/)
+- **Honor USB COM 1.0 Drivers (Huawei):**  
+  [Martview Forum - Huawei Drivers](https://www.martview-forum.com/threads/huawei-usb-com-1-0-drivers.17374/)
+
+---
+
+### Mobile Drivers by CPU Type
+
+| **Driver CPU Type** | **Driver Resource** |
+|---------------------|---------------------|
+| **Qualcomm**         | [Download via Google Drive](https://drive.google.com/drive/folders/15OOdRU5eohtfEHogEp7DA1LprbHAUfgk) |
+| **MTK (Mediatek)**   | [Download via Google Drive](https://drive.google.com/drive/folders/15OOdRU5eohtfEHogEp7DA1LprbHAUfgk) |
+| **SPD (Spreadtrum)** | [Download via Google Drive](https://drive.google.com/drive/folders/15OOdRU5eohtfEHogEp7DA1LprbHAUfgk) |
+| **iPhone**           | 3U Tool Software |
+| **Samsung**          | [Samkey Website](https://www.samkey.org/) |
+| **Honor**            | Search "Honor 1.0" on Google or use [Martview Forum](https://www.martview-forum.com/) |
+| **ADB**              | Download with SDK tools |
+| **MTP**              | Usually auto-downloads with Android SDK tools |
+
+---
+
 ### Hacking and Mobile Repair Resources
 
 #### Emergency Dial Codes
