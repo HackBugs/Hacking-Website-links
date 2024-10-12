@@ -2,7 +2,7 @@
 
 #### Driver Download Links
 - **Qualcomm, Mediatek, and SPD Drivers (Google Drive):**  
-  [Google Drive Folder](https://drive.google.com/drive/folders/15OOdRU5eohtfEHogEp7DA1LprbHAUfgk)
+  [Martview Forum](https://www.martview-forum.com/)
 - **Driver Installation Tutorial Video:**  
   [YouTube Video](https://youtu.be/fTzhyd8Q9Lg?si=9KiD-e5xZatqaMk9)
 
@@ -18,9 +18,9 @@
 
 | **Driver CPU Type** | **Driver Resource** |
 |---------------------|---------------------|
-| **Qualcomm**         | [Download via Google Drive](https://drive.google.com/drive/folders/15OOdRU5eohtfEHogEp7DA1LprbHAUfgk) |
-| **MTK (Mediatek)**   | [Download via Google Drive](https://drive.google.com/drive/folders/15OOdRU5eohtfEHogEp7DA1LprbHAUfgk) |
-| **SPD (Spreadtrum)** | [Download via Google Drive](https://drive.google.com/drive/folders/15OOdRU5eohtfEHogEp7DA1LprbHAUfgk) |
+| **Qualcomm**         | [Martview Forum](https://www.martview-forum.com/) |
+| **MTK (Mediatek)**   | [Martview Forum](https://www.martview-forum.com/) |
+| **SPD (Spreadtrum)** | [Martview Forum](https://www.martview-forum.com/) |
 | **iPhone**           | 3U Tool Software |
 | **Samsung**          | [Samkey Website](https://www.samkey.org/) |
 | **Honor**            | Search "Honor 1.0" on Google or use [Martview Forum](https://www.martview-forum.com/) |
