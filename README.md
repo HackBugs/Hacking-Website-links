@@ -116,3 +116,9 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 - **Malware Analysis Tools**: [Malware Analysis Tools](https://malwareanalysis.tools/)
 - **Android-x86 Project**: [Android-x86](https://www.android-x86.org/)
 - **ViewDNS**: [ViewDNS](https://viewdns.info/)
+
+<hr>
+
+> Windows Password Cracking and tools bundle
+
+![Windows Password Cracking and tools bundle](https://github.com/HackBugs/Hacking-Website-links/blob/main/Password%20cracking%20os-1.png)
