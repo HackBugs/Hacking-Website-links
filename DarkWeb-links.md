@@ -68,7 +68,7 @@ Here’s a categorized list of the provided links related to the dark web and ot
 - [Ahmia](http://ahmia.fi/)  
 - [Dark Web News](http://darkwebnews.com/)  
 - [Reddit - DeepWeb](https://www.reddit.com/r/deepweb/)  
-- [TorLinks](http://torlinkbgs6neox.onion/)  
+- [TorLinks](http://torlinkbgs6neox.onion/)
 
 ### Important Note
 Accessing the dark web carries significant risks. Always prioritize your safety and privacy.
