@@ -39,9 +39,8 @@ Here’s a categorized list of the provided links related to the dark web and ot
 
 #### Miscellaneous Tor Links
 - **Search - Tor Links**: 
-  - [Link 1](http://search7tdrcvri22rieiwgi5g46qnwsesvnubqav2xakhezv4hjzkkad.onion/)
-  - [Link 2](http://5n4qdkw2wavc55peppyrelmb2rgsx7ohcb2tkxhub2gyfurxulfyd3id.onion/)
-  - [Link 3](http://jsclqp6fsm5q2w7hy5jx6nvr22l7wjrndquef3ex4psrhivfhl4y2wad.onion/)
+  - [Deep Search](http://search7tdrcvri22rieiwgi5g46qnwsesvnubqav2xakhezv4hjzkkad.onion/)
+  - [Tor Links](http://5n4qdkw2wavc55peppyrelmb2rgsx7ohcb2tkxhub2gyfurxulfyd3id.onion/)
 
 #### Dark Forum
 - **Data of Indian Railways Users**: [Data Sale Link](http://hn.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion/stories/34146425)
