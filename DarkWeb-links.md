@@ -1,7 +1,7 @@
 
 ### Note
-Be aware of the risks associated with accessing dark web resources. Always prioritize safety and legality in your online activities.
 
+> Be aware of the risks associated with accessing dark web resources. Always prioritize safety and legality in your online activities.
 Here’s a categorized list of the provided links related to the dark web and other resources:
 
 ### Dark Web Resources
