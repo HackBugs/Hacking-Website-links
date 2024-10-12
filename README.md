@@ -49,8 +49,6 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 
 ### Hacking Resources
 - [Android Hacking Resources](https://freeeducationweb.com/?s=android+hacking)
-- [OSINT Framework](https://osintframework.com/)
-- [Malware Analysis Tools](https://malwareanalysis.tools/)
 - [MobSF - Mobile Security Framework](https://mobsf.live/)
 
 ### Software and Tools
