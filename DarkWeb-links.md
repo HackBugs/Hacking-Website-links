@@ -58,6 +58,21 @@ Here’s a categorized list of the provided links related to the dark web and ot
 - [Semantic Scholar](https://www.semanticscholar.org/)
 - **Sci-Hub** (Considered unethical by most countries. For informational purposes only): [Sci-Hub](https://sci-hub.se/)
 
+- Here’s the list of famous dark web websites formatted as clickable links:
+
+- [The Silk Road](http://silkroad6ownowfk.onion/)  
+- [AlphaBay](http://alphabayd3gk2g2x.onion/)  
+- [Dream Market](http://dreammarketl6m6z6.onion/)  
+- [Dread](http://dreadbuxjmj2i5l3.onion/)  
+- [The Hub](http://thehub7k7djuhs.onion/)  
+- [Ahmia](http://ahmia.fi/)  
+- [Dark Web News](http://darkwebnews.com/)  
+- [Reddit - DeepWeb](https://www.reddit.com/r/deepweb/)  
+- [TorLinks](http://torlinkbgs6neox.onion/)  
+
+### Important Note
+Accessing the dark web carries significant risks. Always prioritize your safety and privacy.
+
 ### Hacking Labs and CTFs
 - [DVWA](https://tryhackme.com/r/room/dvwa)
 - [PicoCTF](https://picoctf.org/)
