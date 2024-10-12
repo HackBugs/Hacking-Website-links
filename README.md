@@ -44,3 +44,41 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 - [94FBR](https://94fbr.org/)
 - [Get Into PC](https://getintopc.com/)
 - [I Get Into PC - Software Categories](https://igetintopc.com/software-categories/)
+
+> Here’s the organized list of the resources and topics you provided, categorized for clarity:
+
+### Hacking Resources
+- [Android Hacking Resources](https://freeeducationweb.com/?s=android+hacking)
+- [OSINT Framework](https://osintframework.com/)
+- [Malware Analysis Tools](https://malwareanalysis.tools/)
+- [MobSF - Mobile Security Framework](https://mobsf.live/)
+
+### Software and Tools
+- **Dex to Java Decompiler Software**
+- **Genymotion App Dynamic Hacking Setup**
+- **Environment Setup**: Frida for Android Lab
+- **Dynamic Analysis Lab Setup**: Android App Hacking
+- **Game Hacking Tools**:
+  - Game Guardian for Android
+  - Cheat Engine for Laptop Game Hacking
+
+### Android Development
+- **Partitioning Tools**:
+  - Android Partition
+  - Android Super Partition
+- **Custom ROM Development**:
+  - Build and Make Custom ROM (YouTube Channel: The GSM Work)
+  - GSI ROM and Custom ROM
+  - CRB Software and Android Kit
+  - Patched VBMeta / Clean VBMeta
+- **Download Android Firmware**: [SamFw.com](https://samfw.com) (to check binary number)
+
+### Software Cracking and Reverse Engineering
+- **Topics Covered**:
+  1. What is Reverse Engineering
+  2. How to Download x64dbg
+  3. How to Download Detect It Easy
+  4. How to Install x64dbg
+  5. Crack Me Software for Testing:
+     - [Cracking Lessons](https://crackinglessons.com/)
+     - [CrackMe](https://crackmes.one/)
