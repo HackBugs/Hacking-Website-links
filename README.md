@@ -1,5 +1,3 @@
-[Windows Softwares tools](https://www.sordum.org/)
-
 # Hacking-Website-links
 
 - [Kali Tools](https://www.kali.org/tools/)
@@ -46,6 +44,22 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 - [94FBR](https://94fbr.org/)
 - [Get Into PC](https://getintopc.com/)
 - [I Get Into PC - Software Categories](https://igetintopc.com/software-categories/)
+
+<hr>
+
+> This list covers websites similar to Sordum.org that offer Windows tools and software utilities.
+
+- [Windows Software Tools](https://www.sordum.org/)
+- [NirSoft Utilities](https://www.nirsoft.net/)
+- [Sysinternals Suite (Microsoft)](https://learn.microsoft.com/en-us/sysinternals/)
+- [PortableApps Collection](https://portableapps.com/)
+- [MajorGeeks Software](https://www.majorgeeks.com/)
+- [Tweaking.com Tools](https://www.tweaking.com/)
+- [Glarysoft Utilities](https://www.glarysoft.com/)
+- [Winaero Customization Tools](https://winaero.com/)
+- [The Windows Club](https://www.thewindowsclub.com/)
+- [Softpedia Software Downloads](https://www.softpedia.com/)
+- [Raymond.CC Tools and Guides](https://www.raymond.cc/)
 
 <hr>
 
