@@ -19,6 +19,9 @@ This script is likely used to:
 
 ## Bypass Admin Install Software
 
+- Create Notepadt file `.txt` to `.bat`
+- Change extensions as a `.bat`
+
 ```
 Set __COMPAT_LAYER=RunAsInvoker
 Start SteamSetup.exe
