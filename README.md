@@ -12,7 +12,7 @@
 - [LimeTorrents](https://www.limetorrents.lol/)
 - [IGGGAMES](https://igg-games.com)
 
-# NWatch Movies online
+# Watch Movies online
 > Reat Imoprtant note
 
  Watch any movie on the first day of release. If the website is unavailable, don’t panic because the website URL often changes due to ban issues.
