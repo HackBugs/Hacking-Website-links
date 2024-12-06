@@ -1,3 +1,17 @@
+# Top 10 Torrent Sites of 2024
+
+- [limetorrents](https://www.limetorrents.lol/home)
+- [YTS](https://yts.mx/)
+- [1337x](http://1337x.to/)
+- [NYAA](https://nyaa.si/)
+- [TorrentGalaxy](https://torrentgalaxy.to/)
+- [The Pirate Bay](http://thepiratebay.org/)
+- [FitGirl Repacks](http://fitgirl-repacks.site/)
+- [Skidrow & Reloaded](https://www.skidrowreloaded.com/)
+- [EZTV](https://eztv.re/)
+- [LimeTorrents](https://www.limetorrents.lol/)
+- [IGGGAMES](https://igg-games.com)
+
 # Hacking-Website-links
 
 - [Kali Tools](https://www.kali.org/tools/)
