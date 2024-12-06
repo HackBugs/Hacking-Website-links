@@ -12,6 +12,15 @@
 - [LimeTorrents](https://www.limetorrents.lol/)
 - [IGGGAMES](https://igg-games.com)
 
+# NWatch Movies online
+> Reat Imoprtant note
+
+ Watch any movie on the first day of release. If the website is unavailable, don’t panic because the website URL often changes due to ban issues.
+
+- [Prmovies](https://prmovies.im/)
+- [FridayBug](https://111.90.150.10/best-rating/)
+- [Watchserieshd](https://freeforyou.site/watchserieshd/)
+
 # Hacking-Website-links
 
 - [Kali Tools](https://www.kali.org/tools/)
