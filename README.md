@@ -161,3 +161,11 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 > Windows Password Cracking and tools bundle
 
 ![Windows Password Cracking and tools bundle](https://github.com/HackBugs/Hacking-Website-links/blob/main/Password%20cracking%20os-1.png)
+
+<hr>
+
+### Research webiste 
+
+- [explorer.globe](https://explorer.globe.engineer/)
+
+<hr>
