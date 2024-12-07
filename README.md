@@ -20,7 +20,7 @@
 - [Prmovies](https://prmovies.im/)
 - [FridayBug](https://111.90.150.10/best-rating/)
 - [Watchserieshd](https://freeforyou.site/watchserieshd/)
-- [5MovieRulz](www.5MovieRulz.shop)
+- [5movierulz](https://www.5movierulz.shop/)
 
 # Hacking-Website-links
 
