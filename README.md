@@ -184,3 +184,4 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 
 ### Send any text lock with password 
 - [disroot](https://bin.disroot.org/)
+- [rentry.co](https://rentry.co/)
