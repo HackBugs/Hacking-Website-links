@@ -14,3 +14,8 @@
 - [LSPosed/LSPatch](https://github.com/LSPosed/LSPatch)
 
 - inject mod in snapchat - [github mod](https://github.com/rhunk/SnapEnhance)
+
+<hr>
+
+## Modules for make mod apk
+- [TwiFucker](https://github.com/Dr-TSNG/TwiFucker)
