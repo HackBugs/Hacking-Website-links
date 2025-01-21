@@ -1,4 +1,4 @@
-## Setup Shizuku app
+## Setup [Shizuku](https://github.com/timschneeb/awesome-shizuku) app
 - [YouTube video](https://youtu.be/hEt_s95dvJk?si=QPI-aOJNfJ2Zrrdd)
 
 ##  LSPatch - Patch Android Apps without Root | MOD Apps? 
