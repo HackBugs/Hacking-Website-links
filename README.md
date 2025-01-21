@@ -181,3 +181,6 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 - [explorer.globe](https://explorer.globe.engineer/)
 
 <hr>
+
+### Send any text lock with password 
+- [disroot](https://bin.disroot.org/)
