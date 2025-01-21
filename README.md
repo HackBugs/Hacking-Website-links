@@ -184,4 +184,4 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 
 ### Send any text lock with password 
 - [disroot](https://bin.disroot.org/)
-- [rentry.co](https://rentry.co/) - Write what ever you want to write and click on go and after - copy your edit code - Your edit code:`XvjAWLQV` like this code paste in your url - https://rentry.co/XvjAWLQV
+- [rentry.co](https://rentry.co/) - Write what ever you want to write and click on go and after - copy code from url `6sir4cc7` -  like this code paste in your url - https://rentry.co/6sir4cc7
