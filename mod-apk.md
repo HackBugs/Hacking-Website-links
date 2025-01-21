@@ -1,3 +1,5 @@
+## Setup Shizuku app
+- [YouTube video](https://youtu.be/hEt_s95dvJk?si=QPI-aOJNfJ2Zrrdd)
 
 ##  LSPatch - Patch Android Apps without Root | MOD Apps? 
 - [YouTube video](https://youtu.be/jFmwq2kOpW8?si=WBJwT28JxSat8BVg)
