@@ -19,3 +19,4 @@
 
 ## Modules for make mod apk
 - [TwiFucker](https://github.com/Dr-TSNG/TwiFucker)
+- [SnapEnhance](https://github.com/rhunk/SnapEnhance)
