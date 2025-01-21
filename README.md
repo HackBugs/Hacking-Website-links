@@ -22,7 +22,7 @@
 - [FridayBug](https://111.90.150.10/best-rating/)
 - [Watchserieshd](https://freeforyou.site/watchserieshd/)
 - [5MovieRulz](www.5MovieRulz.shop)
-- [opendirectory-finder](https://ewasion.github.io/opendirectory-finder/)
+- [opendirectory-finder](https://vegamoviese.cfd/)
 
 # Hacking-Website-links
 
