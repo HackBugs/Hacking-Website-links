@@ -1,3 +1,6 @@
+# Live Cricket 
+-  [fairplay24](https://fairplay24.in/)
+
 # Top 10 Torrent Sites of 2024
 
 - [limetorrents](https://www.limetorrents.lol/home)
