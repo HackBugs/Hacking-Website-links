@@ -34,3 +34,4 @@
 ## Modules for make mod apk
 - [TwiFucker](https://github.com/Dr-TSNG/TwiFucker)
 - [SnapEnhance](https://github.com/rhunk/SnapEnhance)
+- [Xposed-Disable-FLAG_SECURE](https://github.com/VarunS2002/Xposed-Disable-FLAG_SECURE)
