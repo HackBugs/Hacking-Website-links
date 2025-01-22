@@ -1,3 +1,12 @@
+
+## Download apk by Playstore application link
+- [apkcombo](https://apkcombo.com/)
+- [raccoon.onyxbits](https://raccoon.onyxbits.de/) - For Laptop
+
+- XAPK Installer
+
+<hr>
+
 ## Setup [Shizuku](https://github.com/timschneeb/awesome-shizuku) app
 - [YouTube video](https://youtu.be/hEt_s95dvJk?si=QPI-aOJNfJ2Zrrdd)
 
