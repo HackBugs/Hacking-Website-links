@@ -44,6 +44,8 @@
 - [xdaforums](https://xdaforums.com/t/module-disable-flag-secure-v10-0-by-mehedi-h-joy.4490475/)
 - [xda-developers](https://www.xda-developers.com/)
 
+<hr>
+
 - Setings > Search > Inatall Unknown Apps
 - Developer Options > USB Debugging > on
 - Developer Options > Wireless Debugging > Pair Device with pairing code
