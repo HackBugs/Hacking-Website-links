@@ -2,6 +2,7 @@
 - [Best Android Mods for Non-Rooted Phones!](https://youtu.be/80cRqjuNF-8?si=0Lzx8WUEQcjeFLqL)
 - [The Most POWERFUL Mods for Social Media Apps!](https://youtu.be/Cf7Ps4NxwWo?si=e0xIy3OImjgUX9Cm)
 - [Best Modded Android Apps in 2023!](https://youtu.be/Ia1uCpE-hGY?si=ZKg_7r3BucbzbluM)
+- [20 POWERFUL Apps that are NOT on the Play Store!](https://youtu.be/urDNwLGMouM?si=EnPuqCbGwCzR1PpO)
 
 ## Download apk by Playstore application link
 - [apkmirror](https://www.apkmirror.com/)
