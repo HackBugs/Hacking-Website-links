@@ -13,6 +13,8 @@
 - XAPK Installer
 - SE Manager
 - Apktool M
+- MT Manager
+- NP Manager 
 
 <hr>
 
