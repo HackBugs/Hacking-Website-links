@@ -3,7 +3,10 @@
 - [apkcombo](https://apkcombo.com/)
 - [raccoon.onyxbits](https://raccoon.onyxbits.de/) - For Laptop
 
+## Usefull Apps Name
 - XAPK Installer
+- SE Manager
+- Apktool M
 
 <hr>
 
