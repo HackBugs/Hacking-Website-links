@@ -35,3 +35,9 @@
 - [TwiFucker](https://github.com/Dr-TSNG/TwiFucker)
 - [SnapEnhance](https://github.com/rhunk/SnapEnhance)
 - [Xposed-Disable-FLAG_SECURE](https://github.com/VarunS2002/Xposed-Disable-FLAG_SECURE)
+
+<hr>
+
+## Other IMP webistes
+- [xdaforums](https://xdaforums.com/t/module-disable-flag-secure-v10-0-by-mehedi-h-joy.4490475/)
+- [xda-developers](https://www.xda-developers.com/)
