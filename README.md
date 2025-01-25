@@ -19,12 +19,30 @@
 > Read Imoprtant note
 
  Watch any movie on the first day of release. If the website is unavailable, don’t panic because the website URL often changes due to ban issues.
+ Google pe seach kare webiste ka name url kam ni kar raha to 
 
-- [Prmovies](https://prmovies.im/)
-- [FridayBug](https://111.90.150.10/best-rating/)
-- [Watchserieshd](https://freeforyou.site/watchserieshd/)
-- [5MovieRulz](www.5MovieRulz.shop)
-- [opendirectory-finder](https://ewasion.github.io/opendirectory-finder/)
+1. [Prmovies](https://prmovies.im/)
+2.  [FridayBug](https://111.90.150.10/best-rating/)
+
+1. [Multimovies](https://multimovies.today/)
+2. [Moviesmod](https://moviesmod.cash/)
+3. [Hindilinks4u](https://hindilinks4u.express/)
+4. [7StarHD](https://7starhd.by/)
+5. [Bolly4U](https://bolly4u.esq/)
+6. [ExtraMovies](https://extramovies.cx/)
+7. [Movies4U](https://movies4u.id/)
+8. [HDHub4U](https://hdhub4u.spa/)
+9. [World4UFree](https://world4ufree.capetown/)
+10. [WorldFree4U](https://worldfree4u.cab/)
+11. [SSRMovies](https://ssrmovies.promo/)
+12. [KatMovieHD](https://katmoviehd.nexus/)
+
+
+
+
+13. [Watchserieshd](https://freeforyou.site/watchserieshd/)
+14. [5MovieRulz](www.5MovieRulz.shop)
+15. [opendirectory-finder](https://ewasion.github.io/opendirectory-finder/)
 
 <hr>
 
