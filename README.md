@@ -1,4 +1,9 @@
-# Live Cricket 
+# Learn English 
+- [PlayPhrase](https://www.playphrase.me)
+- [youglish](https://youglish.com/)
+- [OpenTalk](https://opentalk.club/)
+
+## Live Cricket 
 -  [fairplay24](https://fairplay24.in/)
 
 # Top 10 Torrent Sites of 2024
