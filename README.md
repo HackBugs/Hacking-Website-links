@@ -27,7 +27,8 @@
 - [clip.cafe](https://clip.cafe/)
 
 1. [Multimovies](https://multimovies.today/) 2. [Moviesmod](https://moviesmod.cash/) 3. [Hindilinks4u](https://hindilinks4u.express/) 4. [7StarHD](https://7starhd.by/) 5. [Bolly4U](https://bolly4u.esq/) 6. [ExtraMovies](https://extramovies.cx/)
-7. [Movies4U](https://movies4u.id/) 8. [HDHub4U](https://hdhub4u.spa/) 9. [World4UFree](https://world4ufree.capetown/) 10. [WorldFree4U](https://worldfree4u.cab/) 11. [SSRMovies](https://ssrmovies.promo/) 12. [KatMovieHD](https://katmoviehd.nexus/) 13. [Yupmovie.com](https://gadg8.in/)
+7. [Movies4U](https://movies4u.id/) 8. [HDHub4U](https://hdhub4u.spa/) 9. [World4UFree](https://world4ufree.capetown/) 10. [WorldFree4U](https://worldfree4u.cab/) 11. [SSRMovies](https://ssrmovies.promo/) 12. [KatMovieHD](https://katmoviehd.nexus/)
+13. [Yupmovie.com](https://gadg8.in/)
 
 14. [Watchserieshd](https://freeforyou.site/watchserieshd/)
 15. [5MovieRulz](www.5MovieRulz.shop)
