@@ -3,6 +3,8 @@
 - [youglish](https://youglish.com/)
 - [OpenTalk](https://opentalk.club/)
 
+- For Study - [annas-archive](https://annas-archive.org/)
+
 ## Live Cricket 
 -  [fairplay24](https://fairplay24.in/)
 
