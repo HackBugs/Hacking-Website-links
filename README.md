@@ -41,7 +41,7 @@
 17. [moviesdrive](https://moviesdrive.pro/)
 
 ```
-For netflix use Veganmovies and 1 flix
+For netflix use Veganmovies and 1flix
 For Amazon prime use gokutv.
 For Disney plus use tubitv.
 For zee5 use pikashow.
