@@ -14,6 +14,8 @@
 - ZArchive
 - Tripozo etrain
 
+<hr>
+
 - Buckwheat : Budget manager App
 
 ## How to Customize Your Homescreen on Android - Theme
