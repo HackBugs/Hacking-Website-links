@@ -21,7 +21,7 @@
 ## Setup [Shizuku](https://github.com/timschneeb/awesome-shizuku) app
 - [YouTube video](https://youtu.be/hEt_s95dvJk?si=QPI-aOJNfJ2Zrrdd)
 
-##  LSPatch [Repo] (https://modules.lsposed.org) - Patch Android Apps without Root | MOD Apps? 
+##  LSPatch [Repo](https://modules.lsposed.org) - Patch Android Apps without Root | MOD Apps? 
 - [YouTube video](https://youtu.be/jFmwq2kOpW8?si=WBJwT28JxSat8BVg)
 - [shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api&hl=en_IN)
 - Download - LSPatch apk
