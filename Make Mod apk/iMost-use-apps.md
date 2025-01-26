@@ -14,6 +14,9 @@
 - ZArchive
 - Tripozo etrain
 
+- Macrodroid
+- Tasker
+
 <hr>
 
 - Atlas Obscura
