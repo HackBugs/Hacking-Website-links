@@ -6,6 +6,7 @@
 - Soul Browser
 - URLCheck
 - F-Droid
+- TrackerControl
 - Work Shift Calendar
 - YMusic
 - Pintrest
