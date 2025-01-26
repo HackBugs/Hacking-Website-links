@@ -18,6 +18,7 @@
 
 - Atlas Obscura
 - Buckwheat : Budget manager App
+- Netgety : internet Speed Meter
 
 ## How to Customize Your Homescreen on Android - Theme
 [YouTube Link](https://youtu.be/D5Vjo2rwbV8?si=Se_E7VUIpKuSP-hD)
