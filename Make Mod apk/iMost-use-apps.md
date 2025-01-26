@@ -1,4 +1,5 @@
-## Application names
+## Application Names
+
 - Hail
 - NoScroll
 - NetGurad
