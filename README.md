@@ -99,6 +99,25 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
   - [Migrate Oracle EBS Database 19c](https://freecoursesites.com/migrate-oracle-ebs-database-19c-file-system-to-19c-rac/)
   - [Oracle Courses Page 2](https://freecoursesites.com/page/2/?s=Oracle)
 
+```
+https://freecourseweb.com
+https://freecryptolearn.com
+https://devcourseweb.com
+https://coursewikia.com  
+https://courseboat.com 
+https://coursehulu.com
+https://courselala.com
+https://coursemega.com
+https://coursepig.com
+https://tutgator.com
+https://tutpig.com 
+https://tutsala.com  
+https://tutgee.com  
+https://appwikia.com 
+https://www.1337x.to
+https://torrentgalaxy.to
+```
+
 ### Software Downloads
 - [94FBR](https://94fbr.org/)
 - [Get Into PC](https://getintopc.com/)
