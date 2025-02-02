@@ -1,3 +1,6 @@
+
+- [Find AI Websites](https://www.aixploria.com/en/)
+
 # Learn English 
 - [PlayPhrase](https://www.playphrase.me)
 - [youglish](https://youglish.com/)
