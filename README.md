@@ -2,6 +2,10 @@
 - [Find AI Websites](https://www.aixploria.com/en/)
 - [Find hacking steps](https://pentestgpt.ai/)
 
+- write here GitHub.com > github1s.com
+- write here GitHub.com > githubbox.com
+- write here GitHub.com > gitingest.com
+
 # Learn English 
 - [PlayPhrase](https://www.playphrase.me)
 - [youglish](https://youglish.com/)
