@@ -6,6 +6,8 @@
 - [if popup blocked screen use that link on this website](https://12ft.io)
 - [superlogout](https://superlogout.com/)
 
+- [project make college](https://projectlearn.io/)
+
 - write here GitHub.com > github1s.com
 - write here GitHub.com > githubbox.com
 - write here GitHub.com > gitingest.com
