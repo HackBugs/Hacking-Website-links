@@ -4,6 +4,7 @@
 - [pythontutor](https://pythontutor.com/)
 - [notebooklm](https://notebooklm.google/)
 - [if popup blocked screen use that link on this website](https://12ft.io)
+- [superlogout](https://superlogout.com/)
 
 - write here GitHub.com > github1s.com
 - write here GitHub.com > githubbox.com
