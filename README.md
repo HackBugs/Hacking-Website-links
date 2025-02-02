@@ -7,12 +7,15 @@
 - [superlogout](https://superlogout.com/)
 
 - [project make college](https://projectlearn.io/)
+- [sing a song with name of girlfriend](https://suno.com/home)
+
+<hr>
 
 - write here GitHub.com > github1s.com
 - write here GitHub.com > githubbox.com
 - write here GitHub.com > gitingest.com
 - write here GitHub.com > Github.dev
-- write here https://youtube.com > study.lol/https://youtube.com
+- write here https://youtube.com > `study.lol/https://youtube.com`
 
 # Learn English 
 - [PlayPhrase](https://www.playphrase.me)
