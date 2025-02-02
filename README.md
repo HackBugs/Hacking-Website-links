@@ -1,5 +1,6 @@
 
 - [Find AI Websites](https://www.aixploria.com/en/)
+- [Find hacking steps](https://pentestgpt.ai/)
 
 # Learn English 
 - [PlayPhrase](https://www.playphrase.me)
