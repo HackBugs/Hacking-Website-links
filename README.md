@@ -8,6 +8,7 @@
 - write here GitHub.com > github1s.com
 - write here GitHub.com > githubbox.com
 - write here GitHub.com > gitingest.com
+- write here https://youtube.com > study.lol/https://youtube.com
 
 # Learn English 
 - [PlayPhrase](https://www.playphrase.me)
