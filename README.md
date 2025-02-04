@@ -249,3 +249,8 @@ https://torrentgalaxy.to
 - [disroot](https://bin.disroot.org/)
 - [rentry.co](https://rentry.co/) - Write what ever you want to write and click on go and after - copy code from url `6sir4cc7` -  like this code paste in your url - https://rentry.co/6sir4cc7
 - [funny-birthday-videos - list.ly](https://list.ly/list/3nZ-funny-birthday-videos)
+
+<hr>
+
+## AI Webistes 
+- [deepseek-ai/Janus-Pro-7B](https://huggingface.co/spaces/deepseek-ai/Janus-Pro-7B)
