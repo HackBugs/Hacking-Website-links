@@ -253,4 +253,5 @@ https://torrentgalaxy.to
 <hr>
 
 ## AI Webistes 
-- [deepseek-ai/Janus-Pro-7B](https://huggingface.co/spaces/deepseek-ai/Janus-Pro-7B)
+- [deepseek - Hugging Face](https://huggingface.co/deepseek-ai)
+- [DeepSeek-ai/Janus-Pro-7B](https://huggingface.co/spaces/deepseek-ai/Janus-Pro-7B) - Identify location from photo with Deepseek ai model
