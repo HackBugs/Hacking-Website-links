@@ -47,6 +47,8 @@
  Watch any movie on the first day of release. If the website is unavailable, don’t panic because the website URL often changes due to ban issues.
  Google pe seach kare webiste ka name url kam ni kar raha to 
 
+- [lk21 - Shofiyyah website](https://lk21.film)
+
 1. [Prmovies](https://prmovies.im/)
 2.  [FridayBug](https://111.90.150.10/best-rating/)
 
