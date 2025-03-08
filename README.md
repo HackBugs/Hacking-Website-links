@@ -1,5 +1,5 @@
 
-## **Ventoy** - Ventoy is an open source tool to create bootable USB drive for ISO
+## **Ventoy** - create bootable USB drive for ISO
 
 <hr>
 
