@@ -1,5 +1,5 @@
 
-## **Ventoy** - create bootable USB drive for ISO
+## **Ventoy** - Create bootable USB drive for ISO
 
 <hr>
 
