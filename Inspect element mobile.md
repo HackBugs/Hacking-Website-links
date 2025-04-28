@@ -12,3 +12,9 @@ javascript:(function () {
     }
 })();
 ```
+
+## Use this code on developer tool console to edit website
+
+```
+document.body.contentEditable = true
+```
