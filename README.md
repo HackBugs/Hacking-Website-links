@@ -52,6 +52,7 @@
  Google pe seach kare webiste ka name url kam ni kar raha to 
 
 - [lk21 - Shofiyyah website](https://lk21.film)
+- [Search torrent hints](https://btdig.com/index.htm)
 
 1. [Prmovies](https://prmovies.im/)
 2.  [FridayBug](https://111.90.150.10/best-rating/)
