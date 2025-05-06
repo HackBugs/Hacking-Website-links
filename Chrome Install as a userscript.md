@@ -1,4 +1,4 @@
-
+# uBlock Origin chrome extension
 # How to Use This Tool
 ## Install as a userscript:
 
@@ -262,6 +262,7 @@ Powerful browser-based tool that mimics IDM's detection capabilities as closely 
 
 <hr>
 
+# uBlock Origin chrome extension
 # CoreBlockerv1.5
 ```
 Author	Buster427
