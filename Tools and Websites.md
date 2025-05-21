@@ -85,7 +85,7 @@
 | **NSLookup / Dig**       | DNS resolution checking tool                                | Built-in (CMD/Terminal)                                |
 | **Netstat**              | Shows active connections and ports                          | Built-in                                               |
 | **Nmap**                 | Port scanning & network mapping                             | [https://nmap.org](https://nmap.org)                   |
-| **Wireshark** **Burp Suite**           | Network packet sniffer and analyzer (deep inspection)       | [https://www.wireshark.org](https://www.wireshark.org) |
+| **Wireshark** / **Burp Suite**           | Network packet sniffer and analyzer (deep inspection)       | [https://www.wireshark.org](https://www.wireshark.org) |
 
 ---
 
@@ -128,7 +128,7 @@
 
 | Rank | Tool                    | Why It's Useful                               |
 | ---- | ----------------------- | --------------------------------------------- |
-| ⭐ 1  | **Wireshark**  **Burp Suite**         | Packet-level troubleshooting, deep inspection |
+| ⭐ 1  | **Wireshark** / **Burp Suite**         | Packet-level troubleshooting, deep inspection |
 | ⭐ 2  | **Advanced IP Scanner** | Find active systems in your LAN quickly       |
 | ⭐ 3  | **Ping & Tracert**      | Quick connectivity checks                     |
 | ⭐ 4  | **Netdata**             | Real-time monitoring with good UI             |
