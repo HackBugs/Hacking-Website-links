@@ -5,7 +5,7 @@
 
 ---
 
-## 🔧 Website Monitoring Tools
+> ## 🔧 Website Monitoring Tools
 
 | Tool              | Link                                                                                             |
 | ----------------- | ------------------------------------------------------------------------------------------------ |
@@ -72,7 +72,7 @@
 
 <hr>
 
-**best networking tools**, **helpdesk ya IT support**, (troubleshooting, monitoring, connectivity check, packet analysis, IP management, etc.), 
+> ## **Best networking tools**, **helpdesk ya IT support**, (troubleshooting, monitoring, connectivity check, packet analysis, IP management, etc.), 
 
 ---
 
