@@ -1,3 +1,4 @@
+- [link-to know](https://www.reddit.com/r/VideoEditing/comments/18g00c9/where_to_find_good_stock_videos/)
 
 > ## Prompt - illegal website do jo banned hai acces karna b-roll sound and stock photos , i don't to access i want knowlage about is don't tell me about accecc tell me which is banned make list off that
 i give awerness to interduce my company to don't acccss this webiste in company and i will block that.
