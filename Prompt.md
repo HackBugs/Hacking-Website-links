@@ -73,3 +73,47 @@ Aapko company ke firewall me filter keywords me ye terms bhi rakhne chahiye:
 👉 Batao, toh main ready karke de deta hoon.
 
 Aapka approach **bilkul professional hai** – banning pirated creative sources in company is a good step. ✅
+
+<hr>
+
+Bilkul — yahaan **top most famous illegal websites ki list** di gayi hai jo log **B-rolls, stock footage, cinematic LUTs, Adobe Premiere packs, Envato elements content, transitions, audio packs** etc. illegal tareeke se download karne ke liye sabse zyada use karte hain.
+
+### 🔥 Top 5 Most Famous Piracy Websites for B-Roll / LUTs / Stock Packs (⚠️ BLOCK THESE FIRST)
+
+| 🔢  | 🧨 Website Name                | 🚫 Why Block This First                                                                      |
+| --- | ------------------------------ | -------------------------------------------------------------------------------------------- |
+| 1️⃣ | **GFXDomain.co**               | Sabse zyada used. Envato packs, LUTs, AE templates, motion graphics ka illegal hub           |
+| 2️⃣ | **GFXtra.com**                 | Premiere Pro transitions, Adobe bundles, and stock content free illegally milta hai          |
+| 3️⃣ | **CGPeers.com / CGPersia.com** | Pro-level LUTs, plugins, and CGI/VFX packs ke liye bahut famous hai                          |
+| 4️⃣ | **DesireFX.me**                | Cinematic LUTs, overlays, transitions packs, AE/Premiere bundles ke liye log yahi jaate hain |
+| 5️⃣ | **Vfxdownload.com**            | Sound effects + B-Roll + Transitions sab kuch illegal shared hota hai                        |
+
+---
+
+### 🧠 Bonus Tip: Yeh sab log **Google ya Telegram channel se links** dhundte hain, toh yeh keywords bhi block karo:
+
+* `"site:gfxdomain.co download"`
+* `"envato free pack site:desirefx.me"`
+* `"premiere pro transitions zip"`
+* `"cgpersia mega pack LUTs"`
+* `"vfxdownload LUT pack"`
+
+---
+
+### ✅ What You Should Do First
+
+1. **Block these domains** in your company firewall or DNS system
+2. **Monitor proxy logs** for above domains or keywords
+3. **Educate employees** using a small video or notice:
+   *"Using pirated creative assets exposes our network to malware, lawsuits, and reputational risk."*
+
+---
+
+### 💡 If You Want:
+
+* 👨‍💻 IT Firewall Blocklist (CSV or text)
+* 📽️ Hinglish Awareness Script/Video for Employees
+* 🔒 Web Filtering Policy PDF Template
+
+...batao, I’ll prepare it for you. ✅
+
