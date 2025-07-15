@@ -11,6 +11,7 @@
 - SignalHire - find email or phone number
 - Email Finder by ContactOut – Email Lookup Tool
 - Instant Data Scraper
+- LeadRocks for LinkedIn: Profiles Scanner
 
 
 
