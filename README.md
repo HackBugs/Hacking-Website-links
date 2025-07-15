@@ -1,4 +1,18 @@
 > Capture2Text_v4.6.3_64bit
+
+> ##  Web scraping
+- CRX Extractor/Downloader
+- Save All Resources
+- Tampermonkey
+
+- Ahrefs SEO Toolbar: On-Page and SERP Tools
+- Wiza - Phone Number & Email Finder
+- SignalHire - find email or phone number
+- Email Finder by ContactOut – Email Lookup Tool
+- Instant Data Scraper
+
+
+
 # [Music](https://www.royaltyfreemusicclips.com/royalty-free-music/ambient-chill-1/)
 
 ## **Ventoy** - Create bootable USB drive for ISO
