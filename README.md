@@ -4,7 +4,8 @@
 - CRX Extractor/Downloader
 - Save All Resources
 - Tampermonkey
-
+- Google Search 100 Results
+---
 - Ahrefs SEO Toolbar: On-Page and SERP Tools
 - Wiza - Phone Number & Email Finder
 - SignalHire - find email or phone number
