@@ -1,5 +1,3 @@
-> Capture2Text_v4.6.3_64bit
-
 > ##  Web scraping
 - CRX Extractor/Downloader
 - Save All Resources
