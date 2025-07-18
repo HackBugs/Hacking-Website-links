@@ -9,3 +9,13 @@
 9.  System Informer
 10. Uninstall Tool
 11. Zekr Quran reader
+
+```
+Master easy toolbox list
+----------------------------
+Microsoft PowerToys (Keyboard Manager aur FancyZones)
+Fences
+Nimi Places
+RocketDock
+Launchy
+```
