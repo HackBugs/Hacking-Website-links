@@ -1,4 +1,7 @@
 ```
+taskschd.msc
+shell:startup
+
 netstat -sp tcp
 netstat -ano | findstr ESTABLISHED
 netstat -ano
@@ -19,6 +22,16 @@ wf.msc
 
 dir "%ProgramFiles%\Windows Defender\MpCmdRun.exe"
 "%ProgramFiles%\Windows Defender\MpCmdRun.exe" -Scan -ScanType 3 -File "C:\Users\Shahnwaz Aalam\Downloads"
+```
+
+```
+CMD 
+wmic product get name,version
+
+PowerShell 
+Get-WmiObject -Class Win32_Product | Select-Object Name, Version
+Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion
+
 ```
 
 > Rescue software generally refers to tools designed for recovering lost or deleted data, repairing damaged systems, or providing remote technical support.
