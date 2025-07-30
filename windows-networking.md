@@ -1,0 +1,3 @@
+```
+netstat -sp tcp
+```
