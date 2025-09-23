@@ -1,4 +1,5 @@
 > ## [Microsoft Store Software link Paste here](https://store.rg-adguard.net/)
+- Install Microsoft from here if have not in your Windwows Laptop [Link](https://github.com/kkkgo/LTSC-Add-MicrosoftStore?tab=readme-ov-file)
 > ## BurpSuite insatll crack
 - [BurpSuite](https://github.com/xiv3r/Burpsuite-Professional?tab=readme-ov-file)
 
