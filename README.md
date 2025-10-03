@@ -72,6 +72,7 @@
  Watch any movie on the first day of release. If the website is unavailable, don’t panic because the website URL often changes due to ban issues.
  Google pe seach kare webiste ka name url kam ni kar raha to 
 
+- allmovieshub
 - [lk21 - Shofiyyah website](https://lk21.film)
 - [Search torrent hints-1](https://btdig.com/index.htm)
 - [Search torrent hints-2](https://ext.to/)
