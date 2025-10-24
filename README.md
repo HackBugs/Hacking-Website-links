@@ -1,3 +1,12 @@
+> # LLM (large language models) ka comparison
+
+1. Artificial Analysis — standardised leaderboard, performance + cost + speed sab compare karta hai. [link](https://artificialanalysis.ai/leaderboards/models?utm_source=chatgpt.com)
+2. Vellum AI Leaderboard — latest state-of-the-art models ka focus, reasoning tasks pe. [link](https://www.vellum.ai/llm-leaderboard?utm_source=chatgpt.com)
+3. LMArena (formerly Chatbot Arena) — real users ke prompt & votes ke through model comparisons. [link](https://www.mehmetbaykar.com/posts/best-websites-to-compare-ai-llms-in-2025/?utm_source=chatgpt.com)
+4. LLMArena.ai — pricing + features + open-source models ka bhi good comparison tool. [link](https://llmarena.ai/?utm_source=chatgpt.com)
+
+<hr>
+
 > ## [Microsoft Store Software link Paste here](https://store.rg-adguard.net/)
 - Install Microsoft from here if have not in your Windwows Laptop [Link](https://github.com/kkkgo/LTSC-Add-MicrosoftStore?tab=readme-ov-file)
 > ## BurpSuite insatll crack
