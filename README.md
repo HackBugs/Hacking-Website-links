@@ -1,6 +1,6 @@
 > # YouTube video Play on 1.5x 2x 3x use thi cmd
 ```
-1.  CTRL + SHIFT + J
+1. CTRL + SHIFT + J
 2. allow pasting
 3. document.getElementsByTagName("video")[0].playbackRate = x
 
