@@ -1,3 +1,13 @@
+> # YouTube video Play on 1.5x 2x 3x use thi cmd
+```
+1.  CTRL + SHIFT + J
+2. allow pasting
+3. document.getElementsByTagName("video")[0].playbackRate = x
+
+edit example document.getElementsByTagName("video")[0].playbackRate = 1.5
+
+```
+
 > # LLM (large language models) ka comparison
 
 1. Artificial Analysis — standardised leaderboard, performance + cost + speed sab compare karta hai. [link](https://artificialanalysis.ai/leaderboards/models?utm_source=chatgpt.com)
