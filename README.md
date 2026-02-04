@@ -160,6 +160,7 @@ Here’s the list of popular hacking and cybersecurity websites formatted as cli
 > Here’s a categorized list of the links you provided for online courses and software downloads:
 
 ### Online Courses
+- [freecourseweb](https://www.freecourseweb.org/)
 - [psdly.ws](https://www.psdly.ws/udemy-accounting-bookkeeping-masterclass-beginner-to-advanced)
 - [InfiCourses](https://www.inficourses.com/)
 - [Tutsgalaxy](https://tutsgalaxy.com/)
