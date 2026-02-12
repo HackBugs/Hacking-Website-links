@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Futuristic Study Notepad 2026</title>
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self';">
+<title>Futuristic Study Notepad 2026 - Tabs + Dynamic Split</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <style>
   :root {
     --bg: #0a0e17;
@@ -19,8 +21,9 @@
     --toolbar-text: #e0f7ff;
     --btn-bg: rgba(255,255,255,0.08);
     --btn-hover: rgba(255,255,255,0.18);
-    --dropdown-bg: #111827;
-    --dropdown-text: #e0f7ff;
+    --tab-active: #00f0ff;
+    --tab-inactive: #334155;
+    --fab-menu-bg: #1e293b;
   }
 
   body.light {
@@ -36,8 +39,9 @@
     --toolbar-text: #0f172a;
     --btn-bg: rgba(15,23,42,0.06);
     --btn-hover: rgba(15,23,42,0.12);
-    --dropdown-bg: white;
-    --dropdown-text: #0f172a;
+    --tab-active: #0ea5e9;
+    --tab-inactive: #cbd5e1;
+    --fab-menu-bg: #e2e8f0;
   }
 
   body {
@@ -45,76 +49,210 @@
     font-family: 'Roboto Mono', monospace;
     background: var(--bg);
     color: var(--text);
-    min-height: 100vh;
-    transition: all 0.5s ease;
+    height: 100vh;
     overflow: hidden;
   }
 
-  .futuristic {
-    font-family: 'Orbitron', sans-serif;
-    letter-spacing: 0.5px;
-  }
+  .futuristic { font-family: 'Orbitron', sans-serif; letter-spacing: 0.5px; }
 
   .toolbar {
     background: linear-gradient(90deg, var(--toolbar), #1e293b);
-    padding: 10px 16px;
+    padding: 8px 12px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
     color: var(--toolbar-text);
-    z-index: 10;
-  }
-
-  .toolbar button,
-  .toolbar select,
-  .toolbar input {
-    padding: 8px 14px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--btn-bg);
-    color: var(--toolbar-text);
-    cursor: pointer;
-    transition: all 0.3s;
+    z-index: 30;
     font-size: 14px;
   }
 
-  .toolbar button:hover,
-  .toolbar select:hover {
+  .toolbar button, .toolbar select, .toolbar input {
+    padding: 6px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--btn-bg);
+    color: var(--toolbar-text);
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .toolbar button:hover, .toolbar select:hover {
     background: var(--btn-hover);
-    box-shadow: 0 0 12px var(--accent-glow);
+    box-shadow: 0 0 10px var(--accent-glow);
   }
 
-  /* Zoom Select - button jaisa look */
-  #zoomSelect {
-    min-width: 82px;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23e0f7ff' d='M6 9l-6-6h12z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 10px;
-    padding-right: 28px !important;
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 58px);
+    position: relative;
   }
 
-  body.light #zoomSelect {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%230f172a' d='M6 9l-6-6 h12z'/%3E%3C/svg%3E");
-  }
-
-  /* Dropdown options (popup) - theme ke according dark/light */
-  .toolbar select option {
-    background: var(--dropdown-bg);
-    color: var(--dropdown-text);
-    padding: 8px;
-  }
-
-  /* Hover effect on options */
-  .toolbar select option:hover {
-    background: var(--accent-glow) !important;
+  .content-wrapper {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
   }
 
   .container {
+    flex: 1;
     display: flex;
-    height: calc(100vh - 58px);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  /* SIDEBAR SEARCH PANEL */
+  #searchSidebar {
+    width: 0;
+    background: var(--toolbar);
+    border-left: 0 solid var(--border);
+    transition: width 0.4s ease; 
+    display: flex;
+    flex-direction: row; 
+    overflow: hidden;
+    z-index: 40;
+    position: relative;
+  }
+  
+  #searchSidebar.active {
+    width: 450px;
+    border-left: 1px solid var(--accent);
+  }
+
+  /* DRAGGABLE RESIZER HANDLE */
+  #resizer {
+    width: 6px;
+    cursor: ew-resize;
+    background: transparent;
+    transition: background 0.3s;
+    height: 100%;
+    flex-shrink: 0;
+    z-index: 50;
+  }
+  #resizer:hover, #resizer.dragging {
+    background: var(--accent);
+  }
+
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 250px; 
+    overflow: hidden;
+  }
+
+  .sidebar-header {
+    padding: 10px;
+    background: var(--header);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  /* BROWSER TABS BAR */
+  .browser-tabs-bar {
+    background: var(--toolbar);
+    display: flex;
+    gap: 2px;
+    padding: 4px 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    align-items: center;
+  }
+
+  .browser-tab {
+    padding: 6px 12px;
+    background: var(--tab-inactive);
+    color: var(--toolbar-text);
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+    min-width: 60px;
+    max-width: 150px;
+    text-align: left;
+    position: relative;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .browser-tab.active {
+    background: var(--tab-active);
+    color: #000;
+    font-weight: bold;
+  }
+
+  .browser-tab .tab-title {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .browser-tab .close-tab {
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.7;
+    padding: 0 4px;
+  }
+
+  .browser-tab .close-tab:hover { 
+    opacity: 1; 
+    color: red; 
+  }
+
+  .new-tab-btn {
+    padding: 4px 10px;
+    background: var(--btn-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--toolbar-text);
+    margin-left: 4px;
+  }
+
+  .new-tab-btn:hover {
+    background: var(--btn-hover);
+  }
+
+  /* SIDEBAR THEME & IFRAME */
+  .iframe-container {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .browser-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; 
+    background: #fff;
+    transition: filter 0.3s ease;
+    display: none;
+  }
+
+  .browser-iframe.active {
+    display: block;
+    z-index: 1;
+  }
+
+  .browser-iframe.dark-web {
+    filter: invert(90%) hue-rotate(180deg);
+  }
+
+  /* Force iframe content to stay within bounds */
+  iframe[sandbox] {
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .editorBox {
@@ -122,29 +260,44 @@
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--border);
+    min-width: 300px;
   }
 
   .editorBox:last-child { border-right: none; }
 
   .editorHeader {
     background: var(--header);
-    padding: 8px 12px;
+    padding: 6px 10px;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
     border-bottom: 1px solid var(--border);
+    font-size: 14px;
   }
 
   .editorArea {
     flex: 1;
     display: flex;
     background: var(--bg);
+    position: relative;
+  }
+
+  #penCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+  #penCanvas.drawing {
+    pointer-events: auto;
+    cursor: crosshair;
   }
 
   .lineNumbers {
     background: var(--lineNum);
     color: #64748b;
-    padding: 12px 8px 0 8px;
+    padding: 10px 6px 0 6px;
     text-align: right;
     user-select: none;
     font-size: 13px;
@@ -161,7 +314,7 @@
     flex: 1;
     border: none;
     outline: none;
-    padding: 12px;
+    padding: 10px;
     font-size: 15px;
     line-height: 1.6;
     background: transparent;
@@ -174,16 +327,58 @@
 
   .status {
     background: var(--status);
-    padding: 6px 12px;
+    padding: 5px 10px;
     font-size: 13px;
     color: #94a3b8;
     border-top: 1px solid var(--border);
   }
 
+  .tabs-bar {
+    background: var(--toolbar);
+    display: flex;
+    gap: 2px;
+    padding: 0 8px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-top: 1px solid var(--border);
+    font-size: 14px;
+    z-index: 20;
+  }
+
+  .tab {
+    padding: 8px 16px;
+    background: var(--tab-inactive);
+    color: var(--toolbar-text);
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+    min-width: 80px;
+    text-align: center;
+    position: relative;
+    user-select: none;
+  }
+
+  .tab.active {
+    background: var(--tab-active);
+    color: #000;
+    font-weight: bold;
+  }
+
+  .tab .close {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .tab .close:hover { opacity: 1; color: red; }
+
   .fab {
     position: fixed;
-    bottom: 55px;
-    right: 24px;
+    bottom: 80px;
+    right: 20px;
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -194,23 +389,61 @@
     box-shadow: 0 6px 20px var(--accent-glow);
     cursor: pointer;
     z-index: 100;
+    transition: transform 0.2s;
+  }
+
+  .fab:hover { transform: scale(1.1); }
+
+  .fab-menu {
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    background: var(--fab-menu-bg);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 99;
+    min-width: 180px;
+    border: 1px solid var(--accent);
+  }
+
+  .fab-menu button {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--btn-bg);
+    color: var(--toolbar-text);
+    cursor: pointer;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .fab-menu button:hover {
+    background: var(--accent);
+    color: #000;
   }
 
   .focus-mode .toolbar,
+  .focus-mode .tabs-bar,
   .focus-mode .editorHeader,
   .focus-mode .status,
-  .focus-mode .fab { display: none; }
+  .focus-mode .fab,
+  .focus-mode .fab-menu { display: none; }
 
   .focus-mode .container { height: 100vh; }
+  
+  @media print {
+    .toolbar, .tabs-bar, .fab, .fab-menu, .editorHeader, .status { display: none !important; }
+    .main-container { height: 100%; }
+  }
 </style>
 </head>
 <body class="futuristic">
 
 <div class="toolbar">
-  <button onclick="setSplit(1)">1</button>
-  <button onclick="setSplit(2)">2</button>
-  <button onclick="setSplit(3)">3</button>
-  <button onclick="setSplit(4)">4</button>
   <button onclick="toggleTheme()">Theme</button>
   <button onclick="toggleFuturistic()">Futuristic Font</button>
   <button onclick="toggleFocus()">Focus</button>
@@ -227,40 +460,456 @@
   </select>
 </div>
 
-<div class="container" id="container"></div>
+<div class="main-container">
+  <div class="content-wrapper" id="captureArea">
+    <div class="container" id="container"></div>
+    
+    <div id="searchSidebar">
+        <div id="resizer"></div>
+        
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <div style="position: relative; display: inline-block;">
+                    <button onclick="toggleQuickMenu()" style="padding: 6px 10px;" title="Quick Access">+</button>
+                    <div id="quickAccessMenu" style="display: none; position: absolute; top: 100%; left: 0; background: var(--fab-menu-bg); border: 1px solid var(--accent); border-radius: 6px; padding: 8px; margin-top: 4px; z-index: 1000; min-width: 150px; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                        <button onclick="openQuickSite('https://www.bing.com')" style="display: block; width: 100%; padding: 8px; margin: 4px 0; background: var(--btn-bg); border: 1px solid var(--border); border-radius: 4px; color: var(--toolbar-text); cursor: pointer; text-align: left;">🔎 Bing (Best)</button>
+                        <button onclick="openQuickSite('https://duckduckgo.com')" style="display: block; width: 100%; padding: 8px; margin: 4px 0; background: var(--btn-bg); border: 1px solid var(--border); border-radius: 4px; color: var(--toolbar-text); cursor: pointer; text-align: left;">🦆 DuckDuckGo</button>
+                        <button onclick="openQuickSite('https://yandex.com')" style="display: block; width: 100%; padding: 8px; margin: 4px 0; background: var(--btn-bg); border: 1px solid var(--border); border-radius: 4px; color: var(--toolbar-text); cursor: pointer; text-align: left;">🔍 Yandex</button>
+                        <button onclick="openQuickSite('https://search.brave.com')" style="display: block; width: 100%; padding: 8px; margin: 4px 0; background: var(--btn-bg); border: 1px solid var(--border); border-radius: 4px; color: var(--toolbar-text); cursor: pointer; text-align: left;">🦁 Brave Search</button>
+                        <button onclick="openQuickSite('https://www.wikipedia.org')" style="display: block; width: 100%; padding: 8px; margin: 4px 0; background: var(--btn-bg); border: 1px solid var(--border); border-radius: 4px; color: var(--toolbar-text); cursor: pointer; text-align: left;">📚 Wikipedia</button>
+                        <hr style="border: 0; border-top: 1px solid var(--border); margin: 4px 0;">
+                        <div style="padding: 4px 8px; font-size: 10px; color: #888; text-align: center;">Note: Google/YouTube block iframes</div>
+                    </div>
+                </div>
+                <input type="text" id="sidebarSearchInput" placeholder="Search or enter URL..." style="flex:1">
+                <button onclick="doSidebarSearch()">Go</button>
+                <button onclick="toggleSidebarWebTheme()" title="Toggle Dark/Light">🌓</button>
+                <button onclick="toggleSidebarSearch()" style="background:rgba(255,0,0,0.2)">X</button>
+            </div>
+            
+            <!-- Browser Tabs Bar -->
+            <div class="browser-tabs-bar" id="browserTabsBar">
+                <button class="new-tab-btn" onclick="addNewBrowserTab()" title="New Tab">+</button>
+            </div>
+            
+            <!-- iFrame Container -->
+            <div class="iframe-container" id="iframeContainer"></div>
+        </div>
+    </div>
+  </div>
+  <div class="tabs-bar" id="tabsBar"></div>
+</div>
 
-<button class="fab" onclick="quickInsert()">+</button>
+<button class="fab" id="fabBtn">+</button>
+<div class="fab-menu" id="fabMenu">
+  <button onclick="addNewTab()">📄 New Tab</button>
+  <button onclick="addSplit()">🥞 Split +</button>
+  <button onclick="clearSplit()">🧹 Clear Split</button>
+  <hr style="border:0; border-top:1px solid var(--border); width:100%">
+  <button onclick="toggleSidebarSearch()">🔍 Web Search (Inside)</button>
+  <button onclick="togglePenTool()">🖋️ Pen Tool (Draw)</button>
+  <button onclick="takeScreenshot()">📸 Take Screenshot</button>
+  <button onclick="window.print()">🖨️ Print Notes</button>
+</div>
+
+<canvas id="penCanvas"></canvas>
 
 <script>
+// ────────────────────────────────────────────── CORE VARIABLES ────────────────────────────────
+let tabs = [];
+let activeTabId = null;
+let tabCounter = 1;
 let currentZoom = 1;
 let focusMode = false;
+let isPenActive = false;
 
-function toggleTheme() {
-  document.body.classList.toggle("light");
+// ────────────────────────────────────────────── BROWSER TAB MANAGEMENT ────────────────────────────────
+let browserTabs = [];
+let activeBrowserTabId = null;
+let browserTabCounter = 1;
+let darkWebMode = false;
+
+function toggleQuickMenu() {
+    const menu = document.getElementById('quickAccessMenu');
+    menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
 }
 
-function toggleFuturistic() {
-  document.body.classList.toggle("futuristic");
+function openQuickSite(url) {
+    if (activeBrowserTabId) {
+        const activeTab = browserTabs.find(t => t.id === activeBrowserTabId);
+        if (activeTab) {
+            activeTab.iframe.src = url;
+            activeTab.url = url;
+            document.getElementById('sidebarSearchInput').value = url;
+        }
+    } else {
+        addNewBrowserTab(url);
+        document.getElementById('sidebarSearchInput').value = url;
+    }
+    document.getElementById('quickAccessMenu').style.display = 'none';
 }
 
-function toggleFocus() {
-  focusMode = !focusMode;
-  document.body.classList.toggle("focus-mode", focusMode);
+// Close quick menu when clicking outside
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('quickAccessMenu');
+    const quickBtn = e.target.closest('button[onclick="toggleQuickMenu()"]');
+    if (!quickBtn && !menu.contains(e.target)) {
+        menu.style.display = 'none';
+    }
+});
+
+function addNewBrowserTab(url = 'about:blank') {
+    const tabId = `browser-tab-${Date.now()}`;
+    
+    // Create iframe with proper referrer policy
+    const iframe = document.createElement('iframe');
+    iframe.id = tabId;
+    iframe.className = 'browser-iframe';
+    iframe.name = tabId;
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    if (darkWebMode) iframe.classList.add('dark-web');
+    
+    // Use more permissive sandbox but configure to keep links internal
+    iframe.sandbox = "allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox";
+    
+    // Set initial source
+    iframe.src = url;
+    
+    document.getElementById('iframeContainer').appendChild(iframe);
+    
+    browserTabs.push({
+        id: tabId,
+        title: 'New Tab',
+        url: url,
+        iframe: iframe
+    });
+    
+    switchToBrowserTab(tabId);
+    renderBrowserTabs();
 }
 
-function toggleFull() {
-  if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{});
-  else document.exitFullscreen().catch(()=>{});
+function renderBrowserTabs() {
+    const bar = document.getElementById('browserTabsBar');
+    // Keep the + button, clear other tabs
+    const plusBtn = bar.querySelector('.new-tab-btn');
+    bar.innerHTML = '';
+    bar.appendChild(plusBtn);
+    
+    browserTabs.forEach(tab => {
+        const el = document.createElement('div');
+        el.className = 'browser-tab' + (tab.id === activeBrowserTabId ? ' active' : '');
+        el.innerHTML = `
+            <span class="tab-title" onclick="switchToBrowserTab('${tab.id}')" title="${tab.title}">${tab.title}</span>
+            <span class="close-tab" onclick="event.stopPropagation(); closeBrowserTab('${tab.id}')">×</span>
+        `;
+        bar.appendChild(el);
+    });
 }
 
-function appliquerZoom() {
-  currentZoom = parseFloat(document.getElementById("zoomSelect").value);
-  document.querySelectorAll("textarea").forEach(t => {
-    t.style.fontSize = (parseFloat(t.style.fontSize || 16) * currentZoom) + "px";
+function switchToBrowserTab(tabId) {
+    activeBrowserTabId = tabId;
+    
+    // Hide all iframes, show only active
+    browserTabs.forEach(tab => {
+        if (tab.id === tabId) {
+            tab.iframe.classList.add('active');
+        } else {
+            tab.iframe.classList.remove('active');
+        }
+    });
+    
+    renderBrowserTabs();
+}
+
+function closeBrowserTab(tabId) {
+    if (browserTabs.length === 1) {
+        // Don't close the last tab, just reset it
+        const tab = browserTabs[0];
+        tab.iframe.src = 'about:blank';
+        tab.title = 'New Tab';
+        renderBrowserTabs();
+        return;
+    }
+    
+    const idx = browserTabs.findIndex(t => t.id === tabId);
+    if (idx === -1) return;
+    
+    const tab = browserTabs[idx];
+    tab.iframe.remove();
+    browserTabs.splice(idx, 1);
+    
+    if (activeBrowserTabId === tabId) {
+        activeBrowserTabId = browserTabs[Math.max(0, idx-1)]?.id || null;
+        if (activeBrowserTabId) {
+            switchToBrowserTab(activeBrowserTabId);
+        }
+    }
+    
+    renderBrowserTabs();
+}
+
+function updateBrowserTabTitle(tabId, title) {
+    const tab = browserTabs.find(t => t.id === tabId);
+    if (tab) {
+        tab.title = title.substring(0, 30) || 'Untitled';
+        renderBrowserTabs();
+    }
+}
+
+// ────────────────────────────────────────────── RESIZER LOGIC ────────────────────────────────
+const sidebar = document.getElementById("searchSidebar");
+const resizer = document.getElementById("resizer");
+
+resizer.addEventListener("mousedown", (e) => {
+    e.preventDefault();
+    document.addEventListener("mousemove", resize);
+    document.addEventListener("mouseup", stopResize);
+    resizer.classList.add("dragging");
+    sidebar.style.transition = "none"; 
+    
+    // Disable pointer events on all iframes during resize
+    browserTabs.forEach(tab => {
+        tab.iframe.style.pointerEvents = "none";
+    });
+});
+
+function resize(e) {
+    const newWidth = window.innerWidth - e.clientX;
+    if (newWidth > 150 && newWidth < (window.innerWidth * 0.85)) {
+        sidebar.style.width = newWidth + "px";
+    }
+}
+
+function stopResize() {
+    document.removeEventListener("mousemove", resize);
+    document.removeEventListener("mouseup", stopResize);
+    resizer.classList.remove("dragging");
+    sidebar.style.transition = "width 0.4s ease"; 
+    
+    // Re-enable pointer events on all iframes
+    browserTabs.forEach(tab => {
+        tab.iframe.style.pointerEvents = "auto";
+    });
+}
+
+// ────────────────────────────────────────────── SIDEBAR TOOLS ───────────────────────────
+function toggleSidebarWebTheme() {
+    darkWebMode = !darkWebMode;
+    browserTabs.forEach(tab => {
+        tab.iframe.classList.toggle("dark-web", darkWebMode);
+    });
+}
+
+function toggleSidebarSearch() {
+    const sb = document.getElementById("searchSidebar");
+    sb.classList.toggle("active");
+    if(sb.classList.contains("active")) {
+        sb.style.width = "450px";
+        // Create first browser tab if none exist
+        if (browserTabs.length === 0) {
+            addNewBrowserTab();
+        }
+    } else {
+        sb.style.width = "0";
+    }
+    fabMenu.style.display = "none";
+}
+
+function doSidebarSearch() {
+    const val = document.getElementById("sidebarSearchInput").value.trim();
+    if (!val) return;
+    
+    let url;
+    
+    // Check if searching for YouTube/Google content
+    if (val.toLowerCase().includes('youtube') || val.toLowerCase().includes('video')) {
+        // Use Bing video search instead
+        url = `https://www.bing.com/videos/search?q=${encodeURIComponent(val)}`;
+    }
+    // Check if it's a URL
+    else if (val.startsWith('http://') || val.startsWith('https://') || val.includes('.com') || val.includes('.org') || val.includes('.net')) {
+        url = val.startsWith('http') ? val : 'https://' + val;
+        
+        // Warn about blocked sites
+        if (url.includes('google.com') || url.includes('youtube.com')) {
+            alert('⚠️ Google and YouTube block iframe embedding for security.\n\nTry:\n• Search for videos on Bing instead\n• Use DuckDuckGo or Yandex\n• Or open in a new browser tab');
+            return;
+        }
+    } 
+    // It's a search query - use Bing
+    else {
+        url = `https://www.bing.com/search?q=${encodeURIComponent(val)}`;
+    }
+    
+    if (activeBrowserTabId) {
+        const activeTab = browserTabs.find(t => t.id === activeBrowserTabId);
+        if (activeTab) {
+            activeTab.iframe.src = url;
+            activeTab.url = url;
+            // Update title after a delay
+            setTimeout(() => {
+                try {
+                    const title = activeTab.iframe.contentDocument?.title || val;
+                    updateBrowserTabTitle(activeBrowserTabId, title);
+                } catch(e) {
+                    updateBrowserTabTitle(activeBrowserTabId, val);
+                }
+            }, 1000);
+        }
+    } else {
+        addNewBrowserTab(url);
+    }
+}
+
+// Handle Enter key in search box
+document.getElementById('sidebarSearchInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        doSidebarSearch();
+    }
+});
+
+// ────────────────────────────────────────────── FAB MENU TOGGLE ────────────────────────────────
+const fabBtn = document.getElementById("fabBtn");
+const fabMenu = document.getElementById("fabMenu");
+
+fabBtn.addEventListener("click", () => {
+  fabMenu.style.display = fabMenu.style.display === "flex" ? "none" : "flex";
+});
+
+document.addEventListener("click", e => {
+  if (!fabBtn.contains(e.target) && !fabMenu.contains(e.target)) {
+    fabMenu.style.display = "none";
+  }
+});
+
+// ────────────────────────────────────────────── EXPERT TOOLS ────────────────────────────────
+
+function takeScreenshot() {
+    const area = document.getElementById("captureArea");
+    html2canvas(area).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "MyStudyNotes_2026.png";
+        link.href = canvas.toDataURL();
+        link.click();
+    });
+    fabMenu.style.display = "none";
+}
+
+const pCanvas = document.getElementById("penCanvas");
+const pCtx = pCanvas.getContext("2d");
+let isDrawing = false;
+
+function togglePenTool() {
+    isPenActive = !isPenActive;
+    pCanvas.classList.toggle("drawing", isPenActive);
+    pCanvas.width = window.innerWidth;
+    pCanvas.height = window.innerHeight;
+    
+    if(isPenActive) {
+        alert("Pen Tool Active: You can now draw/mark on the screen.");
+    }
+    fabMenu.style.display = "none";
+}
+
+pCanvas.onmousedown = (e) => { if(isPenActive) isDrawing = true; };
+pCanvas.onmouseup = () => { isDrawing = false; pCtx.beginPath(); };
+pCanvas.onmousemove = (e) => {
+    if(!isDrawing || !isPenActive) return;
+    pCtx.lineWidth = 3;
+    pCtx.lineCap = "round";
+    pCtx.strokeStyle = "#00f0ff";
+    pCtx.lineTo(e.clientX, e.clientY);
+    pCtx.stroke();
+    pCtx.beginPath();
+    pCtx.moveTo(e.clientX, e.clientY);
+};
+
+// ────────────────────────────────────────────── TAB & SPLIT LOGIC ────────────────────────────────
+function addNewTab() {
+  const tabId = `tab-${Date.now()}`;
+  tabs.push({
+    id: tabId,
+    title: `Tab ${tabCounter++}`,
+    splitCount: 1
+  });
+  renderTabs();
+  switchToTab(tabId);
+  fabMenu.style.display = "none";
+}
+
+function renderTabs() {
+  const bar = document.getElementById("tabsBar");
+  bar.innerHTML = "";
+  tabs.forEach(tab => {
+    const el = document.createElement("div");
+    el.className = "tab" + (tab.id === activeTabId ? " active" : "");
+    el.innerHTML = `
+      <span onclick="switchToTab('${tab.id}')">${tab.title}</span>
+      <span class="close" onclick="event.stopPropagation(); closeTab('${tab.id}')">×</span>
+    `;
+    bar.appendChild(el);
   });
 }
 
-function createEditor(id) {
+function switchToTab(tabId) {
+  if (activeTabId) saveCurrentTabContent();
+  activeTabId = tabId;
+  renderTabs();
+  renderActiveEditors();
+}
+
+function saveCurrentTabContent() {
+  const editors = document.querySelectorAll(`textarea[data-tab-id="${activeTabId}"]`);
+  editors.forEach((ta, i) => {
+    localStorage.setItem(`${activeTabId}-pane${i+1}`, ta.value);
+  });
+}
+
+function closeTab(tabId) {
+  if (tabs.length === 1) return alert("Cannot close last tab");
+  const idx = tabs.findIndex(t => t.id === tabId);
+  if (idx === -1) return;
+  tabs.splice(idx, 1);
+  for (let i = 1; i <= 8; i++) localStorage.removeItem(`${tabId}-pane${i}`);
+  if (activeTabId === tabId) {
+    activeTabId = tabs[Math.max(0, idx-1)]?.id || null;
+  }
+  renderTabs();
+  if (activeTabId) renderActiveEditors();
+}
+
+function addSplit() {
+  if (!activeTabId) return;
+  const tab = tabs.find(t => t.id === activeTabId);
+  if (tab && tab.splitCount < 8) {
+    tab.splitCount++;
+    renderActiveEditors();
+  }
+  fabMenu.style.display = "none";
+}
+
+function clearSplit() {
+  if (!activeTabId) return;
+  const tab = tabs.find(t => t.id === activeTabId);
+  if (tab) {
+    tab.splitCount = 1;
+    renderActiveEditors();
+  }
+  fabMenu.style.display = "none";
+}
+
+function renderActiveEditors() {
+  const container = document.getElementById("container");
+  container.innerHTML = "";
+  if (!activeTabId) return;
+  const tab = tabs.find(t => t.id === activeTabId);
+  const count = tab ? tab.splitCount : 1;
+  for (let i = 1; i <= count; i++) {
+    container.appendChild(createEditor(activeTabId, i));
+  }
+}
+
+function createEditor(tabId, paneIndex) {
   const box = document.createElement("div");
   box.className = "editorBox";
 
@@ -280,27 +929,26 @@ function createEditor(id) {
 
   const btnFindNext = document.createElement("button"); btnFindNext.textContent = "↓";
   const btnFindPrev = document.createElement("button"); btnFindPrev.textContent = "↑";
-
-  const btnDate = document.createElement("button"); btnDate.textContent = "Date";
+  const btnDate  = document.createElement("button"); btnDate.textContent  = "Date";
   const btnClear = document.createElement("button"); btnClear.textContent = "Clear";
-  const btnWrap = document.createElement("button"); btnWrap.textContent = "Wrap: On";
-  const btnUndo = document.createElement("button"); btnUndo.textContent = "Undo";
-  const btnRedo = document.createElement("button"); btnRedo.textContent = "Redo";
+  const btnWrap  = document.createElement("button"); btnWrap.textContent  = "Wrap: On";
+  const btnUndo  = document.createElement("button"); btnUndo.textContent  = "Undo";
+  const btnRedo  = document.createElement("button"); btnRedo.textContent  = "Redo";
 
   header.append(fontSelect, searchIn, btnFindPrev, btnFindNext, btnDate, btnClear, btnWrap, btnUndo, btnRedo);
 
   const area = document.createElement("div");
   area.className = "editorArea";
-
   const nums = document.createElement("div");
   nums.className = "lineNumbers";
 
   const ta = document.createElement("textarea");
-  ta.value = localStorage.getItem(`note${id}`) || "";
+  ta.dataset.tabId = tabId;
+  ta.dataset.paneIndex = paneIndex;
+  ta.value = localStorage.getItem(`${tabId}-pane${paneIndex}`) || "";
   ta.spellcheck = false;
 
   area.append(nums, ta);
-
   const status = document.createElement("div");
   status.className = "status";
 
@@ -311,16 +959,15 @@ function createEditor(id) {
     if (histPos < history.length - 1) history = history.slice(0, histPos + 1);
     history.push(ta.value);
     histPos = history.length - 1;
-    localStorage.setItem(`note${id}`, ta.value);
+    localStorage.setItem(`${tabId}-pane${paneIndex}`, ta.value);
   }
 
   function updateAll() {
     const text = ta.value;
-    const lineCount = (text.match(/\n/g) || []).length + 1;
-    let numStr = "";
-    for (let i = 1; i <= lineCount; i++) numStr += i + "\n";
-    nums.textContent = numStr;
-
+    const lines = (text.match(/\n/g) || []).length + 1;
+    let numsStr = "";
+    for (let i = 1; i <= lines; i++) numsStr += i + "\n";
+    nums.textContent = numsStr;
     const words = text.trim() ? text.trim().split(/\s+/).length : 0;
     const chars = text.length;
     const readMin = Math.ceil(words / 220);
@@ -330,31 +977,13 @@ function createEditor(id) {
 
   ta.addEventListener("input", () => { saveHistory(); updateAll(); });
   ta.addEventListener("scroll", () => { nums.scrollTop = ta.scrollTop; });
-
   fontSelect.onchange = () => ta.style.fontSize = fontSelect.value;
-
   btnUndo.onclick = () => { if (histPos > 0) { histPos--; ta.value = history[histPos]; updateAll(); } };
   btnRedo.onclick = () => { if (histPos < history.length - 1) { histPos++; ta.value = history[histPos]; updateAll(); } };
-
-  btnDate.onclick = () => {
-    ta.value += "\n" + new Date().toLocaleString();
-    saveHistory(); updateAll();
-  };
-
-  btnClear.onclick = () => {
-    if (confirm("Clear?")) {
-      ta.value = "";
-      localStorage.removeItem(`note${id}`);
-      history = [""]; histPos = 0;
-      updateAll();
-    }
-  };
-
-  btnWrap.onClick = () => {
-    ta.style.whiteSpace = ta.style.whiteSpace === "pre" ? "pre-wrap" : "pre";
-    btnWrap.textContent = ta.style.whiteSpace === "pre" ? "Wrap: Off" : "Wrap: On";
-  };
-
+  btnDate.onclick = () => { ta.value += "\n" + new Date().toLocaleString(); saveHistory(); updateAll(); };
+  btnClear.onclick = () => { if (confirm("Clear this pane?")) { ta.value = ""; localStorage.removeItem(`${tabId}-pane${paneIndex}`); history = [""]; histPos = 0; updateAll(); } };
+  btnWrap.onclick = () => { ta.style.whiteSpace = ta.style.whiteSpace === "pre" ? "pre-wrap" : "pre"; btnWrap.textContent = ta.style.whiteSpace === "pre" ? "Wrap: Off" : "Wrap: On"; };
+  
   ta.addEventListener("keydown", e => {
     if (e.key === "Tab") {
       e.preventDefault();
@@ -366,21 +995,30 @@ function createEditor(id) {
 
   box.append(header, area, status);
   updateAll();
+  ta.style.fontSize = (parseFloat(ta.style.fontSize || 16) * currentZoom) + "px";
   return box;
 }
 
-function setSplit(num) {
-  document.getElementById("container").innerHTML = "";
-  for (let i = 1; i <= num; i++) {
-    document.getElementById("container").appendChild(createEditor(i));
-  }
+function applyZoom() {
+  currentZoom = parseFloat(document.getElementById("zoomSelect").value);
   document.querySelectorAll("textarea").forEach(t => {
     t.style.fontSize = (parseFloat(t.style.fontSize || 16) * currentZoom) + "px";
   });
 }
 
-setSplit(1);
+function toggleTheme() { document.body.classList.toggle("light"); }
+function toggleFuturistic() { document.body.classList.toggle("futuristic"); }
+function toggleFocus() { focusMode = !focusMode; document.body.classList.toggle("focus-mode", focusMode); }
+function toggleFull() { if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{}); else document.exitFullscreen().catch(()=>{}); }
+function speakToText() { alert("Voice recognition activated (Browser feature)"); }
+function quickSummary() { alert("AI analyzing notes..."); }
+
+// Start
+addNewTab();
+
+window.addEventListener("keydown", e => {
+  if (e.ctrlKey && e.key === "n") { e.preventDefault(); addNewTab(); }
+});
 </script>
 </body>
 </html>
-
