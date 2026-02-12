@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Futuristic Study Notepad 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap">
+<style>
+  :root {
+    --bg: #0a0e17;
+    --text: #e0f7ff;
+    --accent: #00f0ff;
+    --accent-glow: #00f0ff33;
+    --toolbar: #111827;
+    --header: #1f2937;
+    --status: #17202a;
+    --lineNum: #0f172a;
+    --border: #334155;
+  }
+  body.light {
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --accent: #0ea5e9;
+    --accent-glow: #0ea5e933;
+    --toolbar: #1e293b;
+    --header: #e2e8f0;
+    --status: #f1f5f9;
+    --lineNum: #e2e8f0;
+    --border: #cbd5e1;
+  }
+  body {
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  .futuristic {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.5px;
+  }
+  .toolbar {
+    background: linear-gradient(90deg, var(--toolbar), #0f172a);
+    padding: 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    z-index: 10;
+  }
+  .toolbar button, .toolbar select, .toolbar input {
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .toolbar button:hover, .toolbar select:hover {
+    background: var(--accent-glow);
+    box-shadow: 0 0 12px var(--accent-glow);
+  }
+  .toolbar select {
+    background: #0f172a !important;
+    color: var(--accent) !important;
+    border-color: var(--accent);
+  }
+  .container {
+    display: flex;
+    height: calc(100vh - 58px);
+  }
+  .editorBox {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+  }
+  .editorBox:last-child { border-right: none; }
+  .editorHeader {
+    background: var(--header);
+    padding: 8px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .editorArea {
+    flex: 1;
+    display: flex;
+    background: var(--bg);
+    overflow: hidden;
+  }
+  .lineNumbers {
+    background: var(--lineNum);
+    color: #64748b;
+    padding: 12px 8px 0 8px;
+    text-align: right;
+    user-select: none;
+    font-size: 13px;
+    line-height: 1.6;
+    width: 52px;
+    min-width: 52px;
+    max-width: 52px;
+    flex: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: pre;
+  }
+  textarea {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    background: transparent;
+    color: var(--text);
+    resize: none;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    caret-color: var(--accent);
+  }
+  .status {
+    background: var(--status);
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #94a3b8;
+    border-top: 1px solid var(--border);
+  }
+  .fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #000;
+    font-size: 24px;
+    border: none;
+    box-shadow: 0 6px 20px var(--accent-glow);
+    cursor: pointer;
+    z-index: 100;
+  }
+  .fab:hover { transform: scale(1.1); }
+
+  .focus-mode .toolbar, .focus-mode .editorHeader, .focus-mode .status, .focus-mode .fab { display: none; }
+  .focus-mode .container { height: 100vh; }
+</style>
+</head>
+<body class="futuristic">
+
+<div class="toolbar">
+  <button onclick="setSplit(1)">1</button>
+  <button onclick="setSplit(2)">2</button>
+  <button onclick="setSplit(3)">3</button>
+  <button onclick="setSplit(4)">4</button>
+  <button onclick="toggleTheme()">Theme</button>
+  <button onclick="toggleFuturistic()">Futuristic Font</button>
+  <button onclick="toggleFocus()">Focus</button>
+  <button onclick="toggleFull()">Full</button>
+  <button onclick="speakToText()">🎤 Speak</button>
+  <button onclick="quickSummary()">AI Summary</button>
+  <select id="zoomSelect" onchange="applyZoom()">
+    <option value="0.8">80%</option>
+    <option value="0.9">90%</option>
+    <option value="1" selected>100%</option>
+    <option value="1.1">110%</option>
+    <option value="1.25">125%</option>
+    <option value="1.5">150%</option>
+  </select>
+</div>
+
+<div class="container" id="container"></div>
+
+<button class="fab" onclick="quickInsert()">+</button>
+
+<script>
+let currentZoom = 1;
+let focusMode = false;
+let futuristicMode = false;
+let recognition = null;
+
+function createEditor(id) {
+  const box = document.createElement("div");
+  box.className = "editorBox";
+
+  const header = document.createElement("div");
+  header.className = "editorHeader";
+
+  const fontSelect = document.createElement("select");
+  ["14px","16px","18px","20px","22px"].forEach(s => {
+    const opt = document.createElement("option");
+    opt.value = s; opt.text = s;
+    fontSelect.appendChild(opt);
+  });
+
+  const searchIn = document.createElement("input");
+  searchIn.placeholder = "Find...";
+  searchIn.style.width = "140px";
+
+  const btnFindNext = document.createElement("button"); btnFindNext.textContent = "↓";
+  const btnFindPrev = document.createElement("button"); btnFindPrev.textContent = "↑";
+
+  const btnDate  = document.createElement("button"); btnDate.textContent  = "Date";
+  const btnClear = document.createElement("button"); btnClear.textContent = "Clear";
+  const btnWrap  = document.createElement("button"); btnWrap.textContent  = "Wrap: On";
+  const btnUndo  = document.createElement("button"); btnUndo.textContent  = "Undo";
+  const btnRedo  = document.createElement("button"); btnRedo.textContent  = "Redo";
+
+  header.append(fontSelect, searchIn, btnFindPrev, btnFindNext, btnDate, btnClear, btnWrap, btnUndo, btnRedo);
+
+  const area = document.createElement("div");
+  area.className = "editorArea";
+
+  const nums = document.createElement("div");
+  nums.className = "lineNumbers";
+
+  const ta = document.createElement("textarea");
+  ta.value = localStorage.getItem(`note${id}`) || "";
+  ta.spellcheck = false;
+
+  area.append(nums, ta);
+
+  const status = document.createElement("div");
+  status.className = "status";
+
+  let history = [ta.value];
+  let histPos = 0;
+
+  function saveHistory() {
+    if (histPos < history.length - 1) history = history.slice(0, histPos + 1);
+    history.push(ta.value);
+    histPos = history.length - 1;
+    localStorage.setItem(`note${id}`, ta.value);
+  }
+
+  function updateAll() {
+    const text = ta.value;
+    const lineCount = (text.match(/\n/g) || []).length + 1;
+
+    let numHtml = "";
+    for (let i = 1; i <= lineCount; i++) {
+      numHtml += i + "\n";
+    }
+    nums.textContent = numHtml;   // ← yeh line important hai – textContent use karo, innerHTML nahi
+
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    const chars = text.length;
+    const readMin = Math.ceil(words / 220);
+
+    let warnClass = chars > 12000 ? "color:#e74c3c" : chars > 8000 ? "color:orange" : "";
+    status.innerHTML = `Words: ${words} • Ch: ${chars} • ~${readMin} min <span style="${warnClass}">${chars > 8000 ? `(${chars})` : ""}</span>`;
+  }
+
+  ta.addEventListener("input", () => { saveHistory(); updateAll(); });
+  ta.addEventListener("scroll",  () => { nums.scrollTop = ta.scrollTop; });
+
+  fontSelect.onchange = () => ta.style.fontSize = fontSelect.value;
+
+  btnUndo.onclick = () => { if (histPos > 0) { histPos--; ta.value = history[histPos]; updateAll(); } };
+  btnRedo.onclick = () => { if (histPos < history.length - 1) { histPos++; ta.value = history[histPos]; updateAll(); } };
+
+  btnDate.onclick = () => {
+    ta.value += "\n" + new Date().toLocaleString();
+    saveHistory(); updateAll();
+  };
+
+  btnClear.onclick = () => {
+    if (confirm("Clear?")) {
+      ta.value = ""; localStorage.removeItem(`note${id}`);
+      history = [""]; histPos = 0; updateAll();
+    }
+  };
+
+  btnWrap.onclick = () => {
+    if (ta.style.whiteSpace === "pre") {
+      ta.style.whiteSpace = "pre-wrap";
+      btnWrap.textContent = "Wrap: On";
+    } else {
+      ta.style.whiteSpace = "pre";
+      btnWrap.textContent = "Wrap: Off";
+    }
+  };
+
+  // Tab → 4 spaces
+  ta.addEventListener("keydown", e => {
+    if (e.key === "Tab") {
+      e.preventDefault();
+      const start = ta.selectionStart;
+      ta.value = ta.value.substring(0, start) + "    " + ta.value.substring(ta.selectionEnd);
+      ta.selectionStart = ta.selectionEnd = start + 4;
+    }
+  });
+
+  box.append(header, area, status);
+  updateAll();
+  return box;
+}
+
+function setSplit(num) {
+  document.getElementById("container").innerHTML = "";
+  for (let i = 1; i <= num; i++) {
+    document.getElementById("container").appendChild(createEditor(i));
+  }
+  document.querySelectorAll("textarea").forEach(t => {
+    t.style.fontSize = (parseFloat(t.style.fontSize || 16) * currentZoom) + "px";
+  });
+}
+
+function toggleTheme() { document.body.classList.toggle("light"); }
+function toggleFuturistic() { document.body.classList.toggle("futuristic"); }
+function toggleFocus() {
+  focusMode = !focusMode;
+  document.body.classList.toggle("focus-mode", focusMode);
+}
+function toggleFull() {
+  if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+  else document.exitFullscreen();
+}
+
+function applyZoom() {
+  currentZoom = parseFloat(document.getElementById("zoomSelect").value);
+  document.querySelectorAll("textarea").forEach(t => {
+    t.style.fontSize = (parseFloat(t.style.fontSize || 16) * currentZoom) + "px";
+  });
+}
+
+// Baaki functions (speakToText, quickSummary, quickInsert) same rakh sakte ho ya remove kar sakte ho
+// yaha sirf line number fix ke liye core code rakha hai
+
+setSplit(1);
+</script>
+</body>
+</html>
