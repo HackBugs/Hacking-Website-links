@@ -16,18 +16,30 @@
     --status: #17202a;
     --lineNum: #0f172a;
     --border: #334155;
+    --toolbar-text: #e0f7ff;
+    --btn-bg: rgba(255,255,255,0.08);
+    --btn-hover: rgba(255,255,255,0.18);
+    --dropdown-bg: #111827;
+    --dropdown-text: #e0f7ff;
   }
+
   body.light {
     --bg: #f8fafc;
     --text: #0f172a;
     --accent: #0ea5e9;
     --accent-glow: #0ea5e933;
-    --toolbar: #1e293b;
-    --header: #e2e8f0;
+    --toolbar: #e2e8f0;
+    --header: #cbd5e1;
     --status: #f1f5f9;
     --lineNum: #e2e8f0;
-    --border: #cbd5e1;
+    --border: #94a3b8;
+    --toolbar-text: #0f172a;
+    --btn-bg: rgba(15,23,42,0.06);
+    --btn-hover: rgba(15,23,42,0.12);
+    --dropdown-bg: white;
+    --dropdown-text: #0f172a;
   }
+
   body {
     margin: 0;
     font-family: 'Roboto Mono', monospace;
@@ -37,48 +49,83 @@
     transition: all 0.5s ease;
     overflow: hidden;
   }
+
   .futuristic {
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 0.5px;
   }
+
   .toolbar {
-    background: linear-gradient(90deg, var(--toolbar), #0f172a);
+    background: linear-gradient(90deg, var(--toolbar), #1e293b);
     padding: 10px 16px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    color: var(--toolbar-text);
     z-index: 10;
   }
-  .toolbar button, .toolbar select, .toolbar input {
+
+  .toolbar button,
+  .toolbar select,
+  .toolbar input {
     padding: 8px 14px;
     border: 1px solid var(--border);
     border-radius: 8px;
-    background: rgba(255,255,255,0.08);
-    color: var(--text);
+    background: var(--btn-bg);
+    color: var(--toolbar-text);
     cursor: pointer;
     transition: all 0.3s;
+    font-size: 14px;
   }
-  .toolbar button:hover, .toolbar select:hover {
-    background: var(--accent-glow);
+
+  .toolbar button:hover,
+  .toolbar select:hover {
+    background: var(--btn-hover);
     box-shadow: 0 0 12px var(--accent-glow);
   }
-  .toolbar select {
-    background: #0f172a !important;
-    color: var(--accent) !important;
-    border-color: var(--accent);
+
+  /* Zoom Select - button jaisa look */
+  #zoomSelect {
+    min-width: 82px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23e0f7ff' d='M6 9l-6-6h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 28px !important;
   }
+
+  body.light #zoomSelect {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%230f172a' d='M6 9l-6-6 h12z'/%3E%3C/svg%3E");
+  }
+
+  /* Dropdown options (popup) - theme ke according dark/light */
+  .toolbar select option {
+    background: var(--dropdown-bg);
+    color: var(--dropdown-text);
+    padding: 8px;
+  }
+
+  /* Hover effect on options */
+  .toolbar select option:hover {
+    background: var(--accent-glow) !important;
+  }
+
   .container {
     display: flex;
     height: calc(100vh - 58px);
   }
+
   .editorBox {
     flex: 1;
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--border);
   }
+
   .editorBox:last-child { border-right: none; }
+
   .editorHeader {
     background: var(--header);
     padding: 8px 12px;
@@ -87,12 +134,13 @@
     gap: 8px;
     border-bottom: 1px solid var(--border);
   }
+
   .editorArea {
     flex: 1;
     display: flex;
     background: var(--bg);
-    overflow: hidden;
   }
+
   .lineNumbers {
     background: var(--lineNum);
     color: #64748b;
@@ -106,9 +154,9 @@
     max-width: 52px;
     flex: none;
     box-sizing: border-box;
-    overflow: hidden;
     white-space: pre;
   }
+
   textarea {
     flex: 1;
     border: none;
@@ -123,6 +171,7 @@
     overflow-wrap: break-word;
     caret-color: var(--accent);
   }
+
   .status {
     background: var(--status);
     padding: 6px 12px;
@@ -130,6 +179,7 @@
     color: #94a3b8;
     border-top: 1px solid var(--border);
   }
+
   .fab {
     position: fixed;
     bottom: 24px;
@@ -145,9 +195,12 @@
     cursor: pointer;
     z-index: 100;
   }
-  .fab:hover { transform: scale(1.1); }
 
-  .focus-mode .toolbar, .focus-mode .editorHeader, .focus-mode .status, .focus-mode .fab { display: none; }
+  .focus-mode .toolbar,
+  .focus-mode .editorHeader,
+  .focus-mode .status,
+  .focus-mode .fab { display: none; }
+
   .focus-mode .container { height: 100vh; }
 </style>
 </head>
@@ -162,7 +215,7 @@
   <button onclick="toggleFuturistic()">Futuristic Font</button>
   <button onclick="toggleFocus()">Focus</button>
   <button onclick="toggleFull()">Full</button>
-  <button onclick="speakToText()">🎤 Speak</button>
+  <button onclick="speakToText()">Speak</button>
   <button onclick="quickSummary()">AI Summary</button>
   <select id="zoomSelect" onchange="applyZoom()">
     <option value="0.8">80%</option>
@@ -181,8 +234,31 @@
 <script>
 let currentZoom = 1;
 let focusMode = false;
-let futuristicMode = false;
-let recognition = null;
+
+function toggleTheme() {
+  document.body.classList.toggle("light");
+}
+
+function toggleFuturistic() {
+  document.body.classList.toggle("futuristic");
+}
+
+function toggleFocus() {
+  focusMode = !focusMode;
+  document.body.classList.toggle("focus-mode", focusMode);
+}
+
+function toggleFull() {
+  if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(()=>{});
+  else document.exitFullscreen().catch(()=>{});
+}
+
+function appliquerZoom() {
+  currentZoom = parseFloat(document.getElementById("zoomSelect").value);
+  document.querySelectorAll("textarea").forEach(t => {
+    t.style.fontSize = (parseFloat(t.style.fontSize || 16) * currentZoom) + "px";
+  });
+}
 
 function createEditor(id) {
   const box = document.createElement("div");
@@ -193,7 +269,7 @@ function createEditor(id) {
 
   const fontSelect = document.createElement("select");
   ["14px","16px","18px","20px","22px"].forEach(s => {
-    const opt = document.createElement("option");
+    let opt = document.createElement("option");
     opt.value = s; opt.text = s;
     fontSelect.appendChild(opt);
   });
@@ -205,11 +281,11 @@ function createEditor(id) {
   const btnFindNext = document.createElement("button"); btnFindNext.textContent = "↓";
   const btnFindPrev = document.createElement("button"); btnFindPrev.textContent = "↑";
 
-  const btnDate  = document.createElement("button"); btnDate.textContent  = "Date";
+  const btnDate = document.createElement("button"); btnDate.textContent = "Date";
   const btnClear = document.createElement("button"); btnClear.textContent = "Clear";
-  const btnWrap  = document.createElement("button"); btnWrap.textContent  = "Wrap: On";
-  const btnUndo  = document.createElement("button"); btnUndo.textContent  = "Undo";
-  const btnRedo  = document.createElement("button"); btnRedo.textContent  = "Redo";
+  const btnWrap = document.createElement("button"); btnWrap.textContent = "Wrap: On";
+  const btnUndo = document.createElement("button"); btnUndo.textContent = "Undo";
+  const btnRedo = document.createElement("button"); btnRedo.textContent = "Redo";
 
   header.append(fontSelect, searchIn, btnFindPrev, btnFindNext, btnDate, btnClear, btnWrap, btnUndo, btnRedo);
 
@@ -241,23 +317,19 @@ function createEditor(id) {
   function updateAll() {
     const text = ta.value;
     const lineCount = (text.match(/\n/g) || []).length + 1;
-
-    let numHtml = "";
-    for (let i = 1; i <= lineCount; i++) {
-      numHtml += i + "\n";
-    }
-    nums.textContent = numHtml;   // ← yeh line important hai – textContent use karo, innerHTML nahi
+    let numStr = "";
+    for (let i = 1; i <= lineCount; i++) numStr += i + "\n";
+    nums.textContent = numStr;
 
     const words = text.trim() ? text.trim().split(/\s+/).length : 0;
     const chars = text.length;
     const readMin = Math.ceil(words / 220);
-
-    let warnClass = chars > 12000 ? "color:#e74c3c" : chars > 8000 ? "color:orange" : "";
-    status.innerHTML = `Words: ${words} • Ch: ${chars} • ~${readMin} min <span style="${warnClass}">${chars > 8000 ? `(${chars})` : ""}</span>`;
+    let warn = chars > 12000 ? 'color:#e74c3c' : chars > 8000 ? 'color:orange' : '';
+    status.innerHTML = `Words: ${words} • Ch: ${chars} • ~${readMin} min <span style="${warn}">${chars > 8000 ? `(${chars})` : ""}</span>`;
   }
 
   ta.addEventListener("input", () => { saveHistory(); updateAll(); });
-  ta.addEventListener("scroll",  () => { nums.scrollTop = ta.scrollTop; });
+  ta.addEventListener("scroll", () => { nums.scrollTop = ta.scrollTop; });
 
   fontSelect.onchange = () => ta.style.fontSize = fontSelect.value;
 
@@ -271,22 +343,18 @@ function createEditor(id) {
 
   btnClear.onclick = () => {
     if (confirm("Clear?")) {
-      ta.value = ""; localStorage.removeItem(`note${id}`);
-      history = [""]; histPos = 0; updateAll();
+      ta.value = "";
+      localStorage.removeItem(`note${id}`);
+      history = [""]; histPos = 0;
+      updateAll();
     }
   };
 
-  btnWrap.onclick = () => {
-    if (ta.style.whiteSpace === "pre") {
-      ta.style.whiteSpace = "pre-wrap";
-      btnWrap.textContent = "Wrap: On";
-    } else {
-      ta.style.whiteSpace = "pre";
-      btnWrap.textContent = "Wrap: Off";
-    }
+  btnWrap.onClick = () => {
+    ta.style.whiteSpace = ta.style.whiteSpace === "pre" ? "pre-wrap" : "pre";
+    btnWrap.textContent = ta.style.whiteSpace === "pre" ? "Wrap: Off" : "Wrap: On";
   };
 
-  // Tab → 4 spaces
   ta.addEventListener("keydown", e => {
     if (e.key === "Tab") {
       e.preventDefault();
@@ -310,27 +378,6 @@ function setSplit(num) {
     t.style.fontSize = (parseFloat(t.style.fontSize || 16) * currentZoom) + "px";
   });
 }
-
-function toggleTheme() { document.body.classList.toggle("light"); }
-function toggleFuturistic() { document.body.classList.toggle("futuristic"); }
-function toggleFocus() {
-  focusMode = !focusMode;
-  document.body.classList.toggle("focus-mode", focusMode);
-}
-function toggleFull() {
-  if (!document.fullscreenElement) document.documentElement.requestFullscreen();
-  else document.exitFullscreen();
-}
-
-function applyZoom() {
-  currentZoom = parseFloat(document.getElementById("zoomSelect").value);
-  document.querySelectorAll("textarea").forEach(t => {
-    t.style.fontSize = (parseFloat(t.style.fontSize || 16) * currentZoom) + "px";
-  });
-}
-
-// Baaki functions (speakToText, quickSummary, quickInsert) same rakh sakte ho ya remove kar sakte ho
-// yaha sirf line number fix ke liye core code rakha hai
 
 setSplit(1);
 </script>
