@@ -196,6 +196,23 @@ https://torrentgalaxy.to
 - [Get Into PC](https://getintopc.com/)
 - [I Get Into PC - Software Categories](https://igetintopc.com/software-categories/)
 
+```
+GetIntoPC
+https://www.downloadpirate.com/
+https://gfxfather.com/
+https://getintoway.com/
+FileCR
+Bagas31
+Soft98
+KaranPC
+Ocean of Games
+IGG Games
+Crackshash
+YASDL
+PirateBay (torrent)
+1337x (torrent)
+```
+
 <hr>
 
 > This list covers websites similar to Sordum.org that offer Windows tools and software utilities.
