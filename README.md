@@ -94,6 +94,7 @@ edit example document.getElementsByTagName("video")[0].playbackRate = 1.5
  Google pe seach kare webiste ka name url kam ni kar raha to 
 
 - allmovieshub
+- [mp4arenamovie](https://mp4arenamovie.com/)
 - [lk21 - Shofiyyah website](https://lk21.film)
 - [Search torrent hints-1](https://btdig.com/index.htm)
 - [Search torrent hints-2](https://ext.to/)
