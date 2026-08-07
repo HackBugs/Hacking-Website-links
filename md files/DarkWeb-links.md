@@ -3,6 +3,7 @@
 UNCENSORED LLM AI
 https://torwiki.org/learn/darknet-ai/
 https://apidog.com/blog/llms-no-restrictions/
+https://www.nomic.ai/gpt4all?ref=apidog.com
 ```
 
 ### Note
