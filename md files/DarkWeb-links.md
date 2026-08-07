@@ -2,6 +2,7 @@
 ```
 UNCENSORED LLM AI
 https://torwiki.org/learn/darknet-ai/
+https://apidog.com/blog/llms-no-restrictions/
 ```
 
 ### Note
