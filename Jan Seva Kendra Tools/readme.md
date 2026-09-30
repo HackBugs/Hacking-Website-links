@@ -19,3 +19,5 @@ python main.py
 9. https://chromewebstore.google.com/detail/warocket/jcfgjifalfldkffiklbhkkddhcpfehio?utm_source=rocketsendio-website
 10. https://www.11zon.com/en/
 11. https://yourastha.in/eaycrop
+12. https://photocopywala.in/
+13. 
