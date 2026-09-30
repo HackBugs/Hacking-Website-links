@@ -12,4 +12,5 @@ Install ImageMagick on your machine if you haven't (link's in the README)
 python main.py
 ```
 
-6. 
+6. https://bgrade.in/
+7. 
