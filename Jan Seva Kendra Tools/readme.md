@@ -22,4 +22,5 @@ python main.py
 12. https://photocopywala.in/
 13. https://tools.photocopywala.in/tools/image-perspective-correction/
 14. https://bgrade.in/
-15. 
+15. https://akprinthub.com/en/
+16. 
