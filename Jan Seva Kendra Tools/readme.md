@@ -46,7 +46,21 @@ python main.py
 
 # 🖼️ Make exe to use CMD for JanSeva_pro.py 
 ```
+
+
+
 pip install pyinstaller
+
+python -m pip install pillow
+python JanSeva_Pro.py
+
+python -m PyInstaller --clean --onefile --noconsole --collect-all pymupdf --collect-all customtkinter --collect-all PIL JanSeva_Pro.py
+
+ip uninstall fitz -y
+pip install --upgrade pymupdf
+
+python -c "import fitz; print(fitz.__doc__)"
+
 python -m PyInstaller --onefile --noconsole JanSeva_Pro.py
 
 python -m pip install opencv-python
