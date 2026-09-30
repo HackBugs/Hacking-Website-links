@@ -494,25 +494,6 @@ In categories ko future mein expand kiya ja sakta hai.
 
 ---
 
-# ➕ Add New Resource
-
-Naya tool add karte waqt is format ko use karein:
-
-```markdown
-### Tool Name
-
-**Website/GitHub:** https://example.com/
-
-**Type:** Website / Software / Chrome Extension / GitHub / Script
-
-**Useful for:**  
-Short description yahan likhein.
-
-**Notes:**  
-Additional information yahan add karein.
-```
-
----
 
 # 📌 Notes
 
