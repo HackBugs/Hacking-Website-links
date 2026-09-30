@@ -18,4 +18,4 @@ python main.py
 8. photo document crop in photoshop use - Perspective crop tool
 9. https://chromewebstore.google.com/detail/warocket/jcfgjifalfldkffiklbhkkddhcpfehio?utm_source=rocketsendio-website
 10. https://www.11zon.com/en/
-11. 
+11. https://yourastha.in/eaycrop
