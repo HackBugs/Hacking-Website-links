@@ -44,7 +44,7 @@ Install ImageMagick on your machine if you haven't already.
 python main.py
 ```
 
-# Use CMD for JanSeva_pro.py make exe 
+# 🖼️ Make exe to use CMD for JanSeva_pro.py 
 ```
 pip install pyinstaller
 python -m PyInstaller --onefile --noconsole JanSeva_Pro.py
