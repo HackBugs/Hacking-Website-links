@@ -46,9 +46,6 @@ python main.py
 
 # 🖼️ Make exe to use CMD for JanSeva_pro.py 
 ```
-
-
-
 pip install pyinstaller
 
 python -m pip install pillow
