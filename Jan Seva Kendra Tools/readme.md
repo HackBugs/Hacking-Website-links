@@ -16,4 +16,5 @@ python main.py
 6. https://techguruplus.com/
 7. https://chromewebstore.google.com/detail/bihar-rtps-auto-save-fill/lbminibkjbiecinpefglfcnephhjbeec?pli=1
 8. photo document crop in photoshop use - Perspective crop tool
-9. 
+9. https://chromewebstore.google.com/detail/warocket/jcfgjifalfldkffiklbhkkddhcpfehio?utm_source=rocketsendio-website
+10. 
