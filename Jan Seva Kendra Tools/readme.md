@@ -23,4 +23,7 @@ python main.py
 13. https://tools.photocopywala.in/tools/image-perspective-correction/
 14. https://bgrade.in/
 15. https://akprinthub.com/en/
-16. 
+16. https://egdocseditor.in/
+17. https://github.com/Noob-214/Passport_Studio
+18. https://lensup.ai/
+19. 
