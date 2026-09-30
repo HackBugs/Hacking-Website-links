@@ -44,6 +44,17 @@ Install ImageMagick on your machine if you haven't already.
 python main.py
 ```
 
+# Use CMD for JanSeva_pro.py make exe 
+```
+pip install pyinstaller
+python -m PyInstaller --onefile --noconsole JanSeva_Pro.py
+
+python -m pip install opencv-python
+python -c "import cv2; print(cv2.__version__)"
+
+python -m PyInstaller --clean --onefile --noconsole JanSeva_Pro.py
+```
+
 ### 2. 11zon
 
 **Website:**
