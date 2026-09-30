@@ -12,7 +12,7 @@ Install ImageMagick on your machine if you haven't (link's in the README)
 python main.py
 ```
 
-5. https://bgrade.in/
+5. Photoshop one click Action file
 6. https://techguruplus.com/
 7. https://chromewebstore.google.com/detail/bihar-rtps-auto-save-fill/lbminibkjbiecinpefglfcnephhjbeec?pli=1
 8. photo document crop in photoshop use - Perspective crop tool
@@ -20,4 +20,6 @@ python main.py
 10. https://www.11zon.com/en/
 11. https://yourastha.in/eaycrop
 12. https://photocopywala.in/
-13. 
+13. https://tools.photocopywala.in/tools/image-perspective-correction/
+14. https://bgrade.in/
+15. 
